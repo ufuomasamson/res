@@ -1,0 +1,779 @@
+PROJECT
+
+Design and build a world-class, premium, futuristic corporate website for Regis Logistics PTE Ltd
+
+
+This company operates in:
+
+Petroleum Storage
+Liquid Storage
+Tank Farms
+Terminal Operations
+Pipeline Transport
+Global Shipping
+Logistics Solutions
+Energy Supply Chain
+
+This is NOT an ordinary logistics website.
+
+The goal is to make visitors immediately feel they are looking at a global multi-billion-dollar energy logistics company.
+
+Every section should feel alive.
+
+Every scroll should tell a story.
+
+Every animation should have purpose.
+
+The experience should be cinematic, luxurious, modern, trustworthy and unforgettable.
+
+
+
+DESIGN GOAL
+
+The website should combine the elegance of Apple, the storytelling of Tesla, the industrial confidence of Shell and the futuristic polish of SpaceX, while maintaining its own identity.
+
+
+Visitors should think:
+
+"This company operates at a global scale."
+
+The design must communicate:
+
+• Trust
+
+• Innovation
+
+• Scale
+
+• Safety
+
+• Sustainability
+
+• Engineering Excellence
+
+
+DESIGN STYLE
+
+Create an interface that is:
+
+Premium
+
+Minimal
+
+Luxury
+
+Industrial
+
+Modern
+
+Immersive
+
+Elegant
+
+Highly Interactive
+
+Smooth
+
+Responsive
+
+Beautiful
+
+Professional
+
+
+COLOR PALETTE
+
+Primary
+
+Deep Navy
+
+Midnight Blue
+
+Ocean Blue
+
+Steel Gray
+
+White
+
+Accent Colors
+
+Petroleum Cyan
+
+Electric Blue
+
+Energy Orange
+
+Emerald Green (Sustainability)
+
+Very subtle gradients.
+
+Never oversaturated.
+
+Everything should feel premium.
+
+TYPOGRAPHY
+
+Large bold headings.
+
+Generous spacing.
+
+Modern sans-serif typography.
+
+Elegant hierarchy.
+
+Readable body text.
+
+Powerful hero headlines.
+
+
+WEBSITE STRUCTURE
+
+The website contains:
+
+Home
+
+About Us
+
+Sustainability
+
+Terminal Operations
+
+Contact Us
+
+Services
+
+Dropdown includes:
+
+Liquid Storage and Handling
+
+Pipeline Transport
+
+Logistics and Shipping
+
+Every page must have its own identity while maintaining a consistent design system.
+
+
+GLOBAL WEBSITE FEATURES
+
+The following should exist throughout the entire website.
+
+Smooth scrolling
+
+Parallax scrolling
+
+Mouse-based interactions
+
+Glassmorphism navigation
+
+Beautiful page transitions
+
+Animated page loading
+
+Animated section reveal
+
+Scroll progress indicator
+
+Micro interactions
+
+Hover animations
+
+Floating gradients
+
+Soft shadows
+
+Modern cards
+
+Rounded corners
+
+Consistent spacing
+
+Animated icons
+
+Elegant buttons
+
+Interactive maps
+
+Lottie animations where appropriate
+
+Everything should feel smooth at 60 FPS.
+
+
+NAVIGATION
+
+Transparent navigation initially.
+
+When scrolling:
+
+becomes glassmorphism
+
+slightly blurred
+
+shrinks smoothly
+
+Logo animates subtly.
+
+Navigation includes:
+
+Home
+
+About
+
+Services ▼
+
+Sustainability
+
+Terminal Operations
+
+Contact
+
+Dropdown menu should feel luxurious.
+
+Instead of plain links:
+
+Each service includes
+
+Small illustration
+
+Title
+
+Short description
+
+Hover animation
+
+
+HOME PAGE
+
+The homepage should be an experience.
+
+Not a brochure.
+
+
+Hero Section
+
+Full viewport.
+
+High-quality cinematic background.
+
+Possibilities:
+
+Large oil tanker
+
+Global shipping lanes
+
+Ocean
+
+Terminal
+
+Storage tanks
+
+Moving clouds
+
+Animated particles
+
+World map overlay
+
+Headline:
+
+Powering Global Energy Logistics
+
+Supporting text:
+
+Safe Storage.
+Reliable Transport.
+Global Energy Solutions.
+
+CTA buttons:
+
+Explore Services
+
+Contact Us
+
+Background should feel alive.
+
+Subtle movement.
+
+Ships moving.
+
+Ocean moving.
+
+Particles floating.
+
+
+Global Network Section
+
+Interactive world map.
+
+Animated shipping routes.
+
+Ports glowing.
+
+Countries connected.
+
+Ships moving between continents.
+
+Hover over a region:
+
+Shows information.
+
+Company Overview
+
+Split layout.
+
+Large imagery.
+
+Elegant typography.
+
+Numbers animate.
+
+Examples:
+
+60+
+
+Years Experience
+
+Millions
+
+Barrels Stored
+
+24/7
+
+Operations
+
+Global
+
+Distribution
+
+
+Services Preview
+
+Large interactive cards.
+
+Not boring icons.
+
+Liquid Storage
+
+Animated tank filling.
+
+Pipeline
+
+Glowing energy flow.
+
+Shipping
+
+Moving vessel.
+
+Logistics
+
+Animated global routes.
+
+Hover should activate animations.
+
+Storytelling Section
+
+Create a scroll-based journey.
+
+Oil
+
+↓
+
+Storage
+
+↓
+
+Pipeline
+
+↓
+
+Terminal
+
+↓
+
+Ship
+
+↓
+
+Global Delivery
+
+Every scroll advances the journey.
+
+Sustainability Preview
+
+Transition from dark industrial colors
+
+into fresh greens.
+
+Animated leaves.
+
+Environmental metrics.
+
+Carbon reduction.
+
+Energy efficiency.
+
+Testimonials
+
+Large cards.
+
+Floating.
+
+Company logos.
+
+Professional appearance.
+
+CTA
+
+Beautiful full-width section.
+
+Large headline.
+
+Background video.
+
+Contact button.
+
+ABOUT PAGE
+
+Should tell the company's story visually.
+
+Timeline animation.
+
+Growth milestones.
+
+Interactive statistics.
+
+Mission
+
+Vision
+
+Core Values
+
+Leadership
+
+Global Presence
+
+Large industrial imagery.
+
+Parallax backgrounds.
+
+Interactive timeline.
+
+Animated achievements.
+
+SUSTAINABILITY PAGE
+
+Completely different atmosphere.
+
+Brighter.
+
+Cleaner.
+
+Fresh.
+
+Use:
+
+Greens
+
+Nature
+
+Energy
+
+Clean backgrounds.
+
+Sections:
+
+Environmental Commitment
+
+Carbon Reduction
+
+Safety Standards
+
+Innovation
+
+Future Goals
+
+Animations:
+
+Growing trees.
+
+Moving leaves.
+
+Carbon metrics counting.
+
+Energy flow diagrams.
+
+TERMINAL OPERATIONS PAGE
+
+One of the strongest pages.
+
+Hero:
+
+Massive petroleum terminal.
+
+Interactive isometric illustration.
+
+Users hover over:
+
+Storage Tanks
+
+Dock
+
+Pipeline
+
+Control Center
+
+Loading Area
+
+Ships
+
+Each hotspot explains operations.
+
+Scroll animation:
+
+Ship arrives
+
+Unload
+
+Storage
+
+Quality inspection
+
+Pipeline transfer
+
+Truck loading
+
+Departure
+
+The entire operation becomes visual storytelling.
+
+CONTACT PAGE
+
+Premium contact experience.
+
+Interactive office map.
+
+Floating contact cards.
+
+Large CTA.
+
+Modern form.
+
+Office information.
+
+Emergency contact.
+
+Business hours.
+
+Animated success confirmation.
+
+SERVICES SECTION
+
+Every service should feel unique.
+
+LIQUID STORAGE & HANDLING
+
+Hero:
+
+Massive storage tanks.
+
+Dark industrial atmosphere.
+
+Animations:
+
+Tank filling.
+
+Liquid movement.
+
+Pressure indicators.
+
+Interactive cross-section of tank.
+
+Explain:
+
+Storage
+
+Handling
+
+Safety
+
+Monitoring
+
+Inspection
+
+Inventory
+
+PIPELINE TRANSPORT
+
+Hero:
+
+Underground glowing pipeline.
+
+Energy pulses travel through pipeline.
+
+Interactive route animation.
+
+Scroll animation:
+
+Oil enters pipeline.
+
+Travels underground.
+
+Arrives at terminal.
+
+Beautiful engineering illustrations.
+
+LOGISTICS & SHIPPING
+
+Hero:
+
+Massive tanker crossing ocean.
+
+Interactive world logistics network.
+
+Animations:
+
+Ships moving.
+
+Containers loading.
+
+Trucks departing.
+
+Air freight routes.
+
+Shipping routes illuminate.
+
+Interactive supply chain diagram.
+
+FOOTER
+
+Not ordinary.
+
+Animated globe.
+
+Shipping routes.
+
+Quick links.
+
+Services.
+
+Newsletter.
+
+Contact.
+
+Social media.
+
+Background animation.
+
+Professional ending.
+
+MICRO INTERACTIONS
+
+Every interaction should feel premium.
+
+Buttons
+
+Soft ripple.
+
+Cards
+
+3D tilt.
+
+Images
+
+Zoom slightly.
+
+Navigation
+
+Smooth transitions.
+
+Icons
+
+Animate.
+
+Counters
+
+Count upward.
+
+Hover
+
+Glow softly.
+
+Links
+
+Elegant underline animation.
+
+Cursor
+
+Premium cursor effects.
+
+SCROLL EXPERIENCE
+
+The website should tell a story.
+
+Never simply stack sections.
+
+Each section transitions naturally into the next.
+
+Background colors evolve.
+
+Content fades.
+
+Objects move.
+
+Camera effects.
+
+Layered parallax.
+
+Scroll-triggered animations.
+
+The user should feel like watching a documentary.
+
+RESPONSIVENESS
+
+Perfect on:
+
+Desktop
+
+Tablet
+
+Mobile
+
+Animations adapt smoothly.
+
+Touch interactions feel natural.
+
+Navigation becomes an elegant mobile menu rather than a simple drawer.
+
+PERFORMANCE
+
+Despite heavy animations:
+
+Fast loading.
+
+Optimized assets.
+
+Lazy loading.
+
+GPU-accelerated animations.
+
+Smooth performance.
+
+Accessibility maintained.
+
+DESIGN PRINCIPLES
+
+Every design decision must satisfy these principles:
+
+Purpose before decoration: Every animation should reinforce the company's story or explain a process.
+Consistency: Colors, spacing, typography, and motion should feel like one cohesive design system.
+Trust: Use premium photography, generous whitespace, and restrained effects to communicate professionalism.
+Storytelling: Guide visitors through the journey of energy—from storage to transport to delivery.
+Performance: Deliver a rich visual experience without compromising speed or usability.
+Accessibility: Ensure readability, keyboard navigation, and sufficient color contrast across all pages.
+FINAL GOAL
+
+Do not design this website like a typical logistics or shipping company website.
+
+Design it like the digital presence of a Fortune 500 global energy corporation—a site worthy of winning design awards while remaining practical, trustworthy, and conversion-focused.
+
+The finished experience should leave visitors with one lasting impression:
+
+"Regis Logistics PTE Ltd is a world-class leader in global energy logistics, combining engineering excellence, operational scale, innovation, and sustainability."
