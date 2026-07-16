@@ -1,22 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
+import { PORTS } from "@/data/ports";
 
 const MAP_W = 1000;
 const MAP_H = 500;
-
-type Hub = {
-  id: string;
-  name: string;
-  region: string;
-  lon: number;
-  lat: number;
-  detail: string;
-  metric: string;
-};
 
 type RouteDef = {
   id: string;
@@ -27,72 +20,15 @@ type RouteDef = {
   bend?: number;
 };
 
-const HUB_DEFS: Hub[] = [
-  {
-    id: "us",
-    name: "Americas",
-    region: "Gulf Coast",
-    lon: -95.37,
-    lat: 29.76,
-    detail: "Gulf Coast tank farms and outbound energy logistics.",
-    metric: "4 terminals",
-  },
-  {
-    id: "eu",
-    name: "Europe",
-    region: "Northwest Hub",
-    lon: 4.48,
-    lat: 51.92,
-    detail: "Northwest Europe distribution and blending corridors.",
-    metric: "3 gateways",
-  },
-  {
-    id: "af",
-    name: "West Africa",
-    region: "Coastal Belt",
-    lon: 3.38,
-    lat: 6.52,
-    detail: "Coastal storage linked to Atlantic shipping lanes.",
-    metric: "2 ports",
-  },
-  {
-    id: "me",
-    name: "Middle East",
-    region: "Energy Corridor",
-    lon: 55.27,
-    lat: 25.2,
-    detail: "Strategic petroleum corridors and pipeline feeders.",
-    metric: "5 corridors",
-  },
-  {
-    id: "sg",
-    name: "Singapore",
-    region: "Regional HQ",
-    lon: 103.82,
-    lat: 1.35,
-    detail: "Regional headquarters and deepwater terminal operations.",
-    metric: "HQ · Terminal",
-  },
-  {
-    id: "au",
-    name: "Asia Pacific",
-    region: "Ocean Routes",
-    lon: 151.21,
-    lat: -33.87,
-    detail: "Asia–Pacific ocean connectivity and regional distribution.",
-    metric: "6 routes",
-  },
-];
-
 const ROUTE_DEFS: RouteDef[] = [
-  { id: "r1", from: "us", to: "eu", color: "#38bdf8", duration: 7, bend: -0.28 },
-  { id: "r2", from: "eu", to: "me", color: "#2dd4bf", duration: 5.5, bend: 0.18 },
-  { id: "r3", from: "me", to: "sg", color: "#2dd4bf", duration: 6, bend: 0.22 },
-  { id: "r4", from: "sg", to: "au", color: "#34d399", duration: 4.5, bend: 0.2 },
-  { id: "r5", from: "us", to: "af", color: "#38bdf8", duration: 8, bend: 0.25 },
-  { id: "r6", from: "af", to: "me", color: "#f97316", duration: 5, bend: -0.15 },
-  { id: "r7", from: "eu", to: "sg", color: "#38bdf8", duration: 9, bend: -0.32 },
-  { id: "r8", from: "us", to: "sg", color: "#2dd4bf", duration: 11, bend: -0.42 },
+  { id: "r1", from: "houston", to: "rotterdam", color: "#38bdf8", duration: 7, bend: -0.28 },
+  { id: "r2", from: "rotterdam", to: "fujairah", color: "#2dd4bf", duration: 6, bend: 0.2 },
+  { id: "r3", from: "fujairah", to: "jurong", color: "#2dd4bf", duration: 6, bend: 0.22 },
+  { id: "r4", from: "jurong", to: "ningbo", color: "#34d399", duration: 4.5, bend: -0.18 },
+  { id: "r5", from: "jurong", to: "johor", color: "#f97316", duration: 3.5, bend: 0.35 },
+  { id: "r6", from: "houston", to: "fujairah", color: "#38bdf8", duration: 10, bend: -0.35 },
+  { id: "r7", from: "rotterdam", to: "jurong", color: "#38bdf8", duration: 9, bend: -0.3 },
+  { id: "r8", from: "ningbo", to: "fujairah", color: "#2dd4bf", duration: 7, bend: 0.25 },
 ];
 
 function project(lon: number, lat: number) {
@@ -163,14 +99,14 @@ function MovingVessel({
 
 export function GlobalNetwork() {
   const reduce = useReducedMotion();
-  const [activeId, setActiveId] = useState("sg");
+  const [activeId, setActiveId] = useState("jurong");
   const [paused, setPaused] = useState(false);
 
   const hubs = useMemo(
     () =>
-      HUB_DEFS.map((hub) => {
-        const { x, y } = project(hub.lon, hub.lat);
-        return { ...hub, x, y };
+      PORTS.map((port) => {
+        const { x, y } = project(port.lon, port.lat);
+        return { ...port, x, y };
       }),
     [],
   );
@@ -188,7 +124,7 @@ export function GlobalNetwork() {
   }, [hubs]);
 
   const active = useMemo(
-    () => hubs.find((h) => h.id === activeId) ?? hubs[4],
+    () => hubs.find((h) => h.id === activeId) ?? hubs[0],
     [activeId, hubs],
   );
 
@@ -232,8 +168,8 @@ export function GlobalNetwork() {
               Connected corridors across the energy world
             </h2>
             <p className="mt-4 max-w-xl text-steel-light">
-              Shipping lanes light up across a live world map. Hover a port to
-              trace routes, vessel traffic, and regional presence.
+              Explore our terminals on a live world map. Select a port to view
+              corridor details and open the full terminal page.
             </p>
           </Reveal>
 
@@ -266,7 +202,6 @@ export function GlobalNetwork() {
           >
             <div className="grid lg:grid-cols-[1fr_300px]">
               <div className="relative aspect-[2/1] w-full overflow-hidden bg-[#020814]">
-                {/* Real equirectangular Earth (night lights) */}
                 <Image
                   src="/maps/earth-night.jpg"
                   alt="World map showing Earth at night"
@@ -275,8 +210,6 @@ export function GlobalNetwork() {
                   className="object-cover object-center"
                   priority={false}
                 />
-
-                {/* Soft topology layer for land silhouette */}
                 <Image
                   src="/maps/earth-topo.png"
                   alt=""
@@ -285,13 +218,10 @@ export function GlobalNetwork() {
                   className="object-cover object-center opacity-[0.28] mix-blend-screen"
                   aria-hidden="true"
                 />
-
-                {/* Brand grade so routes stay readable */}
                 <div className="pointer-events-none absolute inset-0 bg-[#031019]/45" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy-950/50 via-transparent to-navy-950/55" />
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(2,6,23,0.55)_100%)]" />
 
-                {/* Animation overlay aligned to geographic projection */}
                 <svg
                   viewBox={`0 0 ${MAP_W} ${MAP_H}`}
                   className="absolute inset-0 h-full w-full"
@@ -360,61 +290,38 @@ export function GlobalNetwork() {
                         onFocus={() => selectHub(hub.id)}
                         tabIndex={0}
                         role="button"
-                        aria-label={`${hub.name}: ${hub.detail}`}
+                        aria-label={`${hub.label}: ${hub.brief}`}
                         aria-pressed={isActive}
                       >
                         <circle cx={hub.x} cy={hub.y} r="24" fill="transparent" />
-
                         {!reduce && (
-                          <>
-                            <circle
-                              cx={hub.x}
-                              cy={hub.y}
-                              r="16"
-                              fill="none"
-                              stroke="#2dd4bf"
-                              strokeWidth="1.2"
-                              opacity={isActive ? 0.65 : 0.2}
-                            >
-                              {isActive && (
-                                <animate
-                                  attributeName="r"
-                                  values="8;24;8"
-                                  dur="2.4s"
-                                  repeatCount="indefinite"
-                                />
-                              )}
-                              {isActive && (
-                                <animate
-                                  attributeName="opacity"
-                                  values="0.7;0;0.7"
-                                  dur="2.4s"
-                                  repeatCount="indefinite"
-                                />
-                              )}
-                            </circle>
-                            <circle
-                              cx={hub.x}
-                              cy={hub.y}
-                              r="10"
-                              fill="none"
-                              stroke="#38bdf8"
-                              strokeWidth="1"
-                              opacity={isActive ? 0.45 : 0.12}
-                            >
-                              {isActive && (
-                                <animate
-                                  attributeName="r"
-                                  values="5;18;5"
-                                  dur="2.4s"
-                                  begin="0.55s"
-                                  repeatCount="indefinite"
-                                />
-                              )}
-                            </circle>
-                          </>
+                          <circle
+                            cx={hub.x}
+                            cy={hub.y}
+                            r="16"
+                            fill="none"
+                            stroke="#2dd4bf"
+                            strokeWidth="1.2"
+                            opacity={isActive ? 0.65 : 0.2}
+                          >
+                            {isActive && (
+                              <animate
+                                attributeName="r"
+                                values="8;24;8"
+                                dur="2.4s"
+                                repeatCount="indefinite"
+                              />
+                            )}
+                            {isActive && (
+                              <animate
+                                attributeName="opacity"
+                                values="0.7;0;0.7"
+                                dur="2.4s"
+                                repeatCount="indefinite"
+                              />
+                            )}
+                          </circle>
                         )}
-
                         <circle
                           cx={hub.x}
                           cy={hub.y}
@@ -424,7 +331,6 @@ export function GlobalNetwork() {
                           strokeWidth="2"
                         />
                         <circle cx={hub.x} cy={hub.y} r="1.8" fill="#ffffff" />
-
                         <text
                           x={hub.x}
                           y={hub.y - 14}
@@ -444,18 +350,6 @@ export function GlobalNetwork() {
                     );
                   })}
                 </svg>
-
-                <div className="absolute bottom-3 left-3 flex flex-wrap gap-3 rounded-xl border border-white/10 bg-navy-950/75 px-3 py-2 text-[10px] tracking-wide text-steel uppercase backdrop-blur-md sm:bottom-4 sm:left-4 sm:text-xs">
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-3 rounded-full bg-cyan" /> Live route
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-electric" /> Port hub
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-white" /> Vessel
-                  </span>
-                </div>
               </div>
 
               <aside className="border-t border-white/10 bg-navy-900/60 p-6 backdrop-blur-sm lg:border-t-0 lg:border-l">
@@ -476,43 +370,32 @@ export function GlobalNetwork() {
                     </h3>
                     <p className="mt-1 text-sm text-electric">{active.region}</p>
                     <p className="mt-4 text-sm leading-relaxed text-steel-light">
-                      {active.detail}
+                      {active.brief}
                     </p>
                     <div className="mt-6 rounded-2xl border border-cyan/20 bg-cyan/5 px-4 py-3">
                       <p className="text-[10px] tracking-[0.16em] text-steel uppercase">
-                        Network footprint
+                        Terminal footprint
                       </p>
                       <p className="mt-1 font-display text-lg font-semibold text-white">
                         {active.metric}
                       </p>
                     </div>
-
-                    <ul className="mt-6 space-y-2">
-                      {routes
-                        .filter((r) => r.from === active.id || r.to === active.id)
-                        .map((r) => {
-                          const otherId = r.from === active.id ? r.to : r.from;
-                          const other = hubs.find((h) => h.id === otherId);
-                          return (
-                            <li
-                              key={r.id}
-                              className="flex items-center gap-2 text-xs text-steel-light"
-                            >
-                              <span
-                                className="h-1.5 w-1.5 rounded-full"
-                                style={{ background: r.color }}
-                              />
-                              Link to {other?.name}
-                            </li>
-                          );
-                        })}
-                    </ul>
+                    <div className="mt-6">
+                      <Button href={`/ports/${active.slug}`} className="w-full">
+                        View Terminal Page
+                      </Button>
+                    </div>
+                    <p className="mt-4 text-xs text-steel">
+                      Or open{" "}
+                      <Link
+                        href={`/ports/${active.slug}`}
+                        className="text-cyan hover:underline"
+                      >
+                        {active.label}
+                      </Link>
+                    </p>
                   </motion.div>
                 </AnimatePresence>
-
-                <p className="mt-8 text-[11px] text-steel">
-                  Auto-cycles hubs — hover to explore a corridor.
-                </p>
               </aside>
             </div>
           </div>

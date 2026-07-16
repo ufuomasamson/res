@@ -20,8 +20,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Regis Logistics PTE Ltd | Global Energy Logistics",
-    template: "%s | Regis Logistics PTE Ltd",
+    default: "Res Logistics PTE Ltd | Global Energy Logistics",
+    template: "%s | Res Logistics PTE Ltd",
   },
   description:
     "World-class petroleum storage, liquid terminals, pipeline transport, and global energy logistics solutions.",

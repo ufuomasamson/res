@@ -1,6 +1,6 @@
-# Regis Logistics PTE Ltd
+# Res Logistics PTE Ltd
 
-Premium corporate website for Regis Logistics — petroleum storage, terminal operations, pipeline transport, and global energy logistics.
+Premium corporate website for Res Logistics — petroleum storage, terminal operations, pipeline transport, and global energy logistics.
 
 ## Stack
 

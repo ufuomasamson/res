@@ -26,10 +26,10 @@ export function Footer() {
 
       <div className="section-pad container-regis relative grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:py-20">
         <div className="lg:col-span-4">
-          <Link href="/" className="inline-block" aria-label="Regis Global Logistics home">
+          <Link href="/" className="inline-block" aria-label="Res Logistics home">
             <Image
               src="/img/regis-logo-clear.png"
-              alt="Regis Global Logistics PTE. LTD"
+              alt="Res Logistics PTE. LTD"
               width={240}
               height={72}
               className="h-14 w-auto object-contain"
@@ -98,7 +98,7 @@ export function Footer() {
       </div>
 
       <div className="section-pad container-regis relative flex flex-col gap-3 border-t border-white/5 py-6 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} Regis Logistics PTE Ltd. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Res Logistics PTE Ltd. All rights reserved.</p>
         <div className="flex gap-5">
           <Link href="/contact" className="hover:text-white">
             Privacy

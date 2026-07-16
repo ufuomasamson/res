@@ -6,7 +6,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 export const metadata: Metadata = {
   title: "Sustainability",
   description:
-    "Environmental commitment, carbon reduction, and safety innovation at Regis Logistics.",
+    "Environmental commitment, carbon reduction, and safety innovation at Res Logistics.",
 };
 
 export default function SustainabilityPage() {

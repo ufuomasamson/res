@@ -74,21 +74,26 @@ export function Hero() {
           <source src="/img/bg-v.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-900/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-900/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/35" />
         {!reduceMotion && <Particles />}
       </div>
 
       <div className="section-pad container-regis relative w-full">
-        <p className="mb-5 font-display text-sm font-semibold tracking-[0.35em] text-cyan uppercase md:text-base">
-          Regis Logistics PTE Ltd
+        <p className="mb-5 font-display text-sm font-semibold tracking-[0.28em] text-cyan uppercase md:text-base">
+          Welcome to Res Logistics PTE LTD
         </p>
         <h1 className="max-w-4xl font-display text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
           Powering Global{" "}
-          <span className="text-gradient">Energy Logistics</span>
+          <span className="text-gradient">Petroleum Supply Chains</span>
         </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-steel-light md:text-xl">
-          Safe Storage. Reliable Transport. Global Energy Solutions.
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-steel-light md:text-lg">
+          Founded in 1964, Res Logistics PTE LTD. has established itself as one
+          of the premier storage and logistics providers in the Netherlands,
+          serving the petroleum industry with decades of expertise. Our
+          operations focus on bulk liquid storage, pipeline transport, chemical
+          blending, and integrated logistics solutions designed to meet the
+          evolving demands of global energy markets.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button href="/services">Explore Services</Button>

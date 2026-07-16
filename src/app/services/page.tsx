@@ -7,7 +7,7 @@ import { Droplets, Waypoints, Ship } from "lucide-react";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Liquid storage, pipeline transport, and global logistics & shipping from Regis Logistics PTE Ltd.",
+    "Liquid storage, pipeline transport, and global logistics & shipping from Res Logistics PTE Ltd.",
 };
 
 const services = [

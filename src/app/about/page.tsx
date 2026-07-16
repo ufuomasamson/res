@@ -6,7 +6,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The story, mission, and leadership behind Regis Logistics PTE Ltd — global energy logistics excellence.",
+    "The story, mission, and leadership behind Res Logistics PTE Ltd — global energy logistics excellence.",
 };
 
 const values = [
@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Regis Logistics"
+        eyebrow="About Res Logistics"
         title="Decades of moving the world’s energy"
         description="We combine industrial scale with meticulous operational craft — building trust across terminals, pipelines, and oceans."
         image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=2400&q=80"

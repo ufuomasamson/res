@@ -10,7 +10,7 @@ export function CompanyOverview() {
           <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
             <Image
               src="/img/company-overview.png"
-              alt="Regis Logistics petroleum storage and terminal operations"
+              alt="Res Logistics petroleum storage and terminal operations"
               fill
               className="object-cover object-center transition-transform duration-700 hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -28,7 +28,7 @@ export function CompanyOverview() {
               Built for scale. Operated with precision.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-steel-light md:text-lg">
-              Regis Logistics PTE Ltd designs and operates critical liquid storage and
+              Res Logistics PTE Ltd designs and operates critical liquid storage and
               energy movement infrastructure. From tank farms to ocean lanes, every
               process is engineered for safety, integrity, and continuous uptime.
             </p>

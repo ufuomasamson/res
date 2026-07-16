@@ -18,7 +18,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Speak with Regis Logistics"
+        title="Speak with Res Logistics"
         description="Terminal coordination, commercial inquiries, and emergency response — we’re ready."
         image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80"
       />
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     Message received
                   </h2>
                   <p className="mt-2 max-w-md text-steel-light">
-                    Thank you. A Regis Logistics specialist will respond shortly.
+                    Thank you. A Res Logistics specialist will respond shortly.
                   </p>
                   <button
                     type="button"

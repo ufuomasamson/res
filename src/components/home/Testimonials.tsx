@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const testimonials = [
   {
     quote:
-      "Regis operates with the discipline of a Fortune 500 infrastructure partner — reliability we can plan around.",
+      "Res operates with the discipline of a Fortune 500 infrastructure partner — reliability we can plan around.",
     name: "Aisha Rahman",
     role: "VP Supply, Global Energy Trader",
     logo: "Aether Energy",

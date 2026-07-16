@@ -1,6 +1,6 @@
 PROJECT
 
-Design and build a world-class, premium, futuristic corporate website for Regis Logistics PTE Ltd
+Design and build a world-class, premium, futuristic corporate website for Res Logistics PTE Ltd
 
 
 This company operates in:
@@ -776,4 +776,4 @@ Design it like the digital presence of a Fortune 500 global energy corporationâ€
 
 The finished experience should leave visitors with one lasting impression:
 
-"Regis Logistics PTE Ltd is a world-class leader in global energy logistics, combining engineering excellence, operational scale, innovation, and sustainability."
+"Res Logistics PTE Ltd is a world-class leader in global energy logistics, combining engineering excellence, operational scale, innovation, and sustainability."

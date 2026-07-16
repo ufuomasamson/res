@@ -76,11 +76,11 @@ export function Navbar() {
         <Link
           href="/"
           className="group relative flex shrink-0 items-center"
-          aria-label="Regis Global Logistics home"
+          aria-label="Res Logistics home"
         >
           <Image
             src="/img/regis-logo-clear.png"
-            alt="Regis Global Logistics PTE. LTD"
+            alt="Res Logistics PTE. LTD"
             width={220}
             height={56}
             priority

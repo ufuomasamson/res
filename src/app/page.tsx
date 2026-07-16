@@ -1,7 +1,8 @@
 import { Hero } from "@/components/home/Hero";
+import { WhoWeAre } from "@/components/home/WhoWeAre";
+import { UnrivaledExpertise } from "@/components/home/UnrivaledExpertise";
+import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { GlobalNetwork } from "@/components/home/GlobalNetwork";
-import { CompanyOverview } from "@/components/home/CompanyOverview";
-import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { StoryJourney } from "@/components/home/StoryJourney";
 import { SustainabilityPreview } from "@/components/home/SustainabilityPreview";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -11,9 +12,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <GlobalNetwork />
-      <CompanyOverview />
-      <ServicesPreview />
+      <WhoWeAre />
+      <UnrivaledExpertise />
+      <WhatWeDo />
+      <div id="global-network">
+        <GlobalNetwork />
+      </div>
       <StoryJourney />
       <SustainabilityPreview />
       <Testimonials />

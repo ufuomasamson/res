@@ -1,0 +1,166 @@
+Now let's make changes to the Hoepage contents
+
+The hero section content:
+Welcome to Res Logistics PTE LTD
+
+Powering Global 
+Petroleum Supply 
+Chains
+
+Founded in 1964, Res Logistics PTE LTD. has established itself as one of the premier storage and logistics providers in the Netherlands, serving the petroleum industry with decades of expertise. Our operations focus on bulk liquid storage, pipeline transport, chemical blending, and integrated logistics solutions designed to meet the evolving demands of global energy markets.
+
+Explore Services, Contact Us. Buttons should be there too
+
+
+
+Now after that, add this new section: "Who we are" with two columns
+One for the title, healder, Paraghraph
+And the other for an image of workers on helmets on on the left
+
+Industry Expertise and Heritage.
+
+With many years of industry experience, Res Logistics PTE LTD has an unparalleled understanding of the petroleum and energy markets. Since our inception in 1964, we have grown and adapted to the rapidly changing landscape, continually refining our services and technologies to remain at the forefront of the industry. Our longevity is a testament to our reliability, efficiency, and commitment to quality service.
+
+With a Learn More Button to About Us Page
+
+ 
+Now another section two columns one for Title and the other for image 
+
+Title: Unrivaled Expertise in Petroleum Logistics
+ 
+Paragraph:
+What sets Res Logistics PTE LTD. apart is our deep expertise in the logistics and transportation of petroleum products. With decades of experience, we have mastered the complexities of international energy supply chains, ensuring the secure and timely delivery of products to refineries, distributors, and end-users across Europe and beyond. Our commitment to customer satisfaction, operational excellence, and industry leadership has allowed us to build strong, long-lasting relationships with our clients, making us the go-to partner for petroleum storage and logistics solutions.
+
+An image of Liquid Storage tanks in a factery
+
+
+
+And another section: "What We Do"
+
+Full width 3 grids design
+
+Middle content:
+
+What We Do
+Comprehensive Service Portfolio
+At Hastveda Shipping B.V., we understand that every client has unique storage and logistics needs. As a result, we offer a comprehensive range of services, all tailored to ensure the smooth and efficient movement of petroleum and chemical products through the global supply chain. Our facilities are designed to handle a wide range of petroleum products, including crude oil, jet fuel, diesel, gasoline, chemicals, and other bulk liquids.
+
+Grids contents:
+
+
+Bulk Liquid Storage
+Our state-of-the-art storage facilities provide secure, flexible solutions for petroleum products. We offer both short-term and long-term storage options, ensuring your products are handled with care and maintained in optimal conditions.
+
+Pipeline Transport
+We utilize an extensive network of pipelines for the safe, efficient, and cost-effective transport of bulk liquids. This reduces reliance on road transport, minimizing environmental impact and enhancing delivery speed.
+
+Chemical Blending
+We offer precise blending services, allowing clients to customize fuel and chemical formulations to meet specific standards. Our blending operations are backed by stringent quality control measures, ensuring product consistency.
+
+Heating Services
+Our heated tanks provide temperature-controlled environments for products that require special storage conditions. This service is essential for maintaining the integrity of products such as heavy fuel oils and waxes.
+
+Terminal Operations
+Our terminals, located in key global energy hubs, facilitate the loading, unloading, and storage of petroleum products. With 24/7 operations, we ensure a smooth, continuous flow of products, meeting the demands of the global energy supply chain.
+
+Warehousing
+Our secure warehousing facilities provide reliable storage solutions for packaged petroleum products and chemicals. We use advanced monitoring systems to maintain optimal storage conditions, keeping your goods safe until they’re ready for dispatch.
+
+Shipping
+We offer global shipping services, ensuring the safe and timely transport of petroleum products across international waters. Our partnerships with major shipping lines and strategic port locations enable us to manage the complex logistics of moving products worldwide with efficiency and precision.
+
+Warehousing
+Our secure warehousing facilities provide reliable storage solutions for packaged petroleum products and chemicals. We use advanced monitoring systems to maintain optimal storage conditions, keeping your goods safe until they’re ready for dispatch.
+
+Quality Testing
+We conduct comprehensive fuel testing services to ensure your products meet all regulatory and performance standards. Equipped with the latest technology, our testing labs provide accurate analysis, ensuring that fuel quality remains consistent and reliable throughout the supply chain.
+
+This section should have really background animations,
+
+
+
+
+Now create this hiden pages 
+
+Jurong Port - Singapore 
+Ningbo Port - China 
+Johor Port -  Malaysia
+Rotterdam Port - Europe 
+Houston Port - America 
+Fujairah Port - Middle East
+
+Here is their contents:
+
+Page Name: Jurong Port - Singapore
+
+Content: 
+The Jurong terminal in Singapore serves as a vital hub for petroleum product storage and distribution in the Asia-Pacific region. With Singapore being one of the world’s largest trading and bunkering ports, our terminal here offers unrivaled connectivity to global markets and plays a key role in facilitating the energy trade in Asia.
+
+
+Page Name: Ningbo Port - China 
+
+Content: 
+Ningbo  china Terminal’s prime location offers unparalleled access to key shipping routes in the Asia-Pacific region. Positioned at the crossroads of global trade, the terminal connects major markets in Asia, Europe, and the Middle East, making it an essential hub for international petrochemical logistics.
+
+
+Page Name: Rotterdam Port - Europe
+
+Content: 
+The port of Rotterdam is a very convenient choice for the supply and transit of crude oil in Europe. The crude oil in Rotterdam comes mainly from the Middle East and the North Sea region. Since the tank terminals are located directly on deep water and Rotterdam has no locks or tides, Rotterdam can accommodate even the largest oil tankers such as ULCCs and supertankers with a capacity of 500,000 DWT. Through an extensive network of pipelines, the crude oil is transported efficiently and safely to the refineries.
+
+
+Page Name: Houston Port - America
+
+Content: 
+Our terminal in Houston, one of the largest energy hubs in the world, is crucial for petroleum product storage and distribution in North America. The Houston terminal is well-equipped to handle both inbound and outbound shipments of crude oil and refined products, serving the needs of refineries, chemical plants, and international markets.
+
+
+Page Name: Fujairah Port - Middle East
+
+Content: 
+Located in the heart of the Middle East, our Fujairah terminal offers world-class storage and logistical support for the region’s booming oil and gas industry. As one of the world’s busiest oil storage and trading hubs, the Fujairah terminal provides services essential for the import and export of petroleum products across the Arabian Gulf, Asia, and Africa.
+
+
+Page Name: Johor Port -  Malaysia
+
+Content: 
+Our tank storage facility at Johor terminal port  is well equipped to handle both inbound and outbound shipments of crude oil and petrochemical products
+
+
+
+Now after creating this hiden pages 
+
+Link them to the Global Network section
+
+All the these:
+Americas
+Europe
+West Africa
+Middle East
+Singapore
+Asia Pacific
+
+Should be replaced with these ones:
+Houston Port - America
+Jurong Port - Singapore
+Ningbo Port - China 
+Fujairah Port - Middle East
+Rotterdam Port - Europe
+Johor Port -  Malaysia
+
+
+And on the  Global Network section: Active corridor
+
+Each port brief content should display there 
+
+And also a button that take user to the Actual page 
+
+
+
+
+
+
+
+
+
+     
