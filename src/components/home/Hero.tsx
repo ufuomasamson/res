@@ -1,7 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+
+const teaser =
+  "Founded in 1964, Res Logistics PTE LTD. has established itself as one of the premier storage and logistics providers in the Netherlands, serving the petroleum industry with decades of expertise.";
+
+const more =
+  "Our operations focus on bulk liquid storage, pipeline transport, chemical blending, and integrated logistics solutions designed to meet the evolving demands of global energy markets.";
 
 function Particles() {
   const [dots, setDots] = useState<{ id: number; left: number; delay: number; size: number }[]>(
@@ -10,11 +18,11 @@ function Particles() {
 
   useEffect(() => {
     setDots(
-      Array.from({ length: 20 }, (_, i) => ({
+      Array.from({ length: 14 }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
         delay: Math.random() * 10,
-        size: 1 + Math.random() * 2.5,
+        size: 1 + Math.random() * 2,
       })),
     );
   }, []);
@@ -24,7 +32,7 @@ function Particles() {
       {dots.map((dot) => (
         <span
           key={dot.id}
-          className="absolute bottom-0 rounded-full bg-cyan/40 animate-[particle-rise_12s_linear_infinite]"
+          className="absolute bottom-0 rounded-full bg-cyan/35 animate-[particle-rise_12s_linear_infinite]"
           style={{
             left: `${dot.left}%`,
             width: dot.size,
@@ -40,6 +48,8 @@ function Particles() {
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const moreId = useId();
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -59,7 +69,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate flex min-h-dvh items-end overflow-hidden pb-20 pt-32 md:items-center md:pb-0 md:pt-24">
+    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
       <div className="absolute inset-0 -z-10">
         <video
           ref={videoRef}
@@ -74,32 +84,69 @@ export function Hero() {
           <source src="/img/bg-v.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-900/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/82 to-navy-900/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
         {!reduceMotion && <Particles />}
       </div>
 
       <div className="section-pad container-regis relative w-full">
-        <p className="mb-5 font-display text-sm font-semibold tracking-[0.28em] text-cyan uppercase md:text-base">
-          Welcome to Res Logistics PTE LTD
-        </p>
-        <h1 className="max-w-4xl font-display text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Powering Global{" "}
-          <span className="text-gradient">Petroleum Supply Chains</span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-steel-light md:text-lg">
-          Founded in 1964, Res Logistics PTE LTD. has established itself as one
-          of the premier storage and logistics providers in the Netherlands,
-          serving the petroleum industry with decades of expertise. Our
-          operations focus on bulk liquid storage, pipeline transport, chemical
-          blending, and integrated logistics solutions designed to meet the
-          evolving demands of global energy markets.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Button href="/services">Explore Services</Button>
-          <Button href="/contact" variant="secondary">
-            Contact Us
-          </Button>
+        <div className="max-w-2xl">
+          <p className="mb-3 font-display text-[11px] font-semibold tracking-[0.28em] text-cyan uppercase sm:text-xs">
+            Welcome to Res Logistics PTE LTD
+          </p>
+
+          <h1 className="font-display text-[2rem] leading-[1.12] font-bold tracking-tight text-white sm:text-4xl md:text-[2.75rem] lg:text-5xl">
+            Powering Global
+            <br className="hidden sm:block" />{" "}
+            <span className="text-gradient">Petroleum Supply Chains</span>
+          </h1>
+
+          <div className="mt-5 max-w-xl">
+            <p className="text-sm leading-relaxed text-steel-light sm:text-[0.95rem]">
+              {teaser}
+            </p>
+
+            <AnimatePresence initial={false}>
+              {expanded && (
+                <motion.p
+                  id={moreId}
+                  key="more"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden text-sm leading-relaxed text-steel-light sm:text-[0.95rem]"
+                >
+                  <span className="mt-3 block">{more}</span>
+                </motion.p>
+              )}
+            </AnimatePresence>
+
+            <button
+              type="button"
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+              aria-controls={moreId}
+              className="mt-2.5 inline-flex cursor-pointer items-center gap-1 text-xs font-semibold tracking-wide text-cyan transition-colors hover:text-electric"
+            >
+              {expanded ? "Read less" : "Read more"}
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                  expanded ? "rotate-180" : ""
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <Button href="/services" className="px-5 py-3 text-xs sm:text-sm">
+              Explore Services
+            </Button>
+            <Button href="/contact" variant="secondary" className="px-5 py-3 text-xs sm:text-sm">
+              Contact Us
+            </Button>
+          </div>
         </div>
       </div>
     </section>
