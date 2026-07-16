@@ -7,12 +7,12 @@ export function WhoWeAre() {
     <section className="relative overflow-hidden bg-navy-950 py-24 md:py-32">
       <div className="section-pad container-regis grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl sm:aspect-[5/6]">
+          <div className="relative aspect-[4/3] max-h-[420px] overflow-hidden rounded-3xl lg:max-h-[460px]">
             <Image
               src="/img/who-we-are.jpg"
               alt="Young industrial worker wearing a safety helmet and work apron"
               fill
-              className="object-cover object-center transition-transform duration-700 hover:scale-105"
+              className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
