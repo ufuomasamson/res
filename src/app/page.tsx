@@ -3,7 +3,6 @@ import { WhoWeAre } from "@/components/home/WhoWeAre";
 import { UnrivaledExpertise } from "@/components/home/UnrivaledExpertise";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { GlobalNetwork } from "@/components/home/GlobalNetwork";
-import { StoryJourney } from "@/components/home/StoryJourney";
 import { SustainabilityPreview } from "@/components/home/SustainabilityPreview";
 import { Testimonials } from "@/components/home/Testimonials";
 import { HomeCTA } from "@/components/home/HomeCTA";
@@ -18,7 +17,6 @@ export default function HomePage() {
       <div id="global-network">
         <GlobalNetwork />
       </div>
-      <StoryJourney />
       <SustainabilityPreview />
       <Testimonials />
       <HomeCTA />

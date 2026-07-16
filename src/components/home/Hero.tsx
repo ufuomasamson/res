@@ -6,10 +6,10 @@ import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const teaser =
-  "Founded in 1964, Res Logistics PTE LTD. has established itself as one of the premier storage and logistics providers in the Netherlands, serving the petroleum industry with decades of expertise.";
+  "Res Logistics has established itself as one of the Asia’s top global logistics and storage providers in Singapore, serving the petroleum industry with years of expertise.";
 
 const more =
-  "Our operations focus on bulk liquid storage, pipeline transport, chemical blending, and integrated logistics solutions designed to meet the evolving demands of global energy markets.";
+  "Our operations focus on bulk liquid storage, vessel shipping, pipeline transport, chemical blending and integrated logistics solutions designed to meet the demand of global energy markets in Asia and Europe.";
 
 function Particles() {
   const [dots, setDots] = useState<{ id: number; left: number; delay: number; size: number }[]>(
