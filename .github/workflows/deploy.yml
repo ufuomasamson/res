@@ -18,12 +18,13 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
           script: |
+            set -e
             cd /www/wwwroot/res
 
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
 
-            yarn install
+            npm ci
+            npm run build
 
-            yarn build
-
-            pm2 restart res
+            pm2 restart res || pm2 start npm --name res -- start
