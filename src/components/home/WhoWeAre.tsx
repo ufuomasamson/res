@@ -9,8 +9,8 @@ export function WhoWeAre() {
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl sm:aspect-[5/6]">
             <Image
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80"
-              alt="Petroleum terminal workers wearing safety helmets"
+              src="/img/who-we-are.jpg"
+              alt="Young industrial worker wearing a safety helmet and work apron"
               fill
               className="object-cover object-center transition-transform duration-700 hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
