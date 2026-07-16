@@ -105,8 +105,20 @@ export function GlobalNetwork() {
   const hubs = useMemo(
     () =>
       PORTS.map((port) => {
-        const { x, y } = project(port.lon, port.lat);
-        return { ...port, x, y };
+        const geo = project(port.lon, port.lat);
+        const ox = port.mapOffset?.x ?? 0;
+        const oy = port.mapOffset?.y ?? 0;
+        return {
+          ...port,
+          geoX: geo.x,
+          geoY: geo.y,
+          x: geo.x + ox,
+          y: geo.y + oy,
+          mapLabel: port.mapLabel ?? port.name,
+          labelDx: port.labelOffset?.x ?? 0,
+          labelDy: port.labelOffset?.y ?? -14,
+          labelAnchor: port.labelOffset?.anchor ?? "middle",
+        };
       }),
     [],
   );
@@ -282,6 +294,9 @@ export function GlobalNetwork() {
 
                   {hubs.map((hub) => {
                     const isActive = hub.id === activeId;
+                    const hasOffset =
+                      Math.abs(hub.x - hub.geoX) > 0.5 ||
+                      Math.abs(hub.y - hub.geoY) > 0.5;
                     return (
                       <g
                         key={hub.id}
@@ -293,6 +308,17 @@ export function GlobalNetwork() {
                         aria-label={`${hub.label}: ${hub.brief}`}
                         aria-pressed={isActive}
                       >
+                        {hasOffset && (
+                          <line
+                            x1={hub.geoX}
+                            y1={hub.geoY}
+                            x2={hub.x}
+                            y2={hub.y}
+                            stroke="rgba(45,212,191,0.45)"
+                            strokeWidth="1"
+                            strokeDasharray="3 3"
+                          />
+                        )}
                         <circle cx={hub.x} cy={hub.y} r="24" fill="transparent" />
                         {!reduce && (
                           <circle
@@ -332,9 +358,9 @@ export function GlobalNetwork() {
                         />
                         <circle cx={hub.x} cy={hub.y} r="1.8" fill="#ffffff" />
                         <text
-                          x={hub.x}
-                          y={hub.y - 14}
-                          textAnchor="middle"
+                          x={hub.x + hub.labelDx}
+                          y={hub.y + hub.labelDy}
+                          textAnchor={hub.labelAnchor}
                           fill={isActive ? "#ffffff" : "#c5d0de"}
                           fontSize="11"
                           fontFamily="var(--font-dm), sans-serif"
@@ -344,7 +370,7 @@ export function GlobalNetwork() {
                             strokeWidth: 3,
                           }}
                         >
-                          {hub.name}
+                          {hub.mapLabel}
                         </text>
                       </g>
                     );
@@ -372,14 +398,6 @@ export function GlobalNetwork() {
                     <p className="mt-4 text-sm leading-relaxed text-steel-light">
                       {active.brief}
                     </p>
-                    <div className="mt-6 rounded-2xl border border-cyan/20 bg-cyan/5 px-4 py-3">
-                      <p className="text-[10px] tracking-[0.16em] text-steel uppercase">
-                        Terminal footprint
-                      </p>
-                      <p className="mt-1 font-display text-lg font-semibold text-white">
-                        {active.metric}
-                      </p>
-                    </div>
                     <div className="mt-6">
                       <Button href={`/ports/${active.slug}`} className="w-full">
                         View Terminal Page

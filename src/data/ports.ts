@@ -9,6 +9,11 @@ export type Port = {
   brief: string;
   content: string;
   metric: string;
+  /** Visual pin offset on the equirectangular map (px in 1000×500 space) */
+  mapOffset?: { x: number; y: number };
+  /** Label offset relative to the pin */
+  labelOffset?: { x: number; y: number; anchor?: "start" | "middle" | "end" };
+  mapLabel?: string;
 };
 
 export const PORTS: Port[] = [
@@ -53,6 +58,9 @@ export const PORTS: Port[] = [
     content:
       "The Jurong terminal in Singapore serves as a vital hub for petroleum product storage and distribution in the Asia-Pacific region. With Singapore being one of the world’s largest trading and bunkering ports, our terminal here offers unrivaled connectivity to global markets and plays a key role in facilitating the energy trade in Asia.",
     metric: "Asia trading hub",
+    mapOffset: { x: -34, y: 28 },
+    labelOffset: { x: -6, y: 18, anchor: "end" },
+    mapLabel: "Jurong",
   },
   {
     id: "ningbo",
@@ -95,6 +103,9 @@ export const PORTS: Port[] = [
     content:
       "Our tank storage facility at Johor terminal port is well equipped to handle both inbound and outbound shipments of crude oil and petrochemical products.",
     metric: "Regional tank farm",
+    mapOffset: { x: 36, y: -30 },
+    labelOffset: { x: 8, y: -12, anchor: "start" },
+    mapLabel: "Johor",
   },
 ];
 
