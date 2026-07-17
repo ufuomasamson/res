@@ -1,102 +1,209 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/ui/PageHero";
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The story, mission, and leadership behind Res Logistics PTE Ltd — global energy logistics excellence.",
+    "With over five decades of experience, Res Logistics PTE Ltd is a trusted partner in bulk liquid storage, logistics, and sustainable energy supply chains.",
 };
 
 const values = [
-  { title: "Safety First", copy: "Every transfer is governed by rigorous protocols and continuous monitoring." },
-  { title: "Engineering Integrity", copy: "Infrastructure designed for decades of precise, reliable performance." },
-  { title: "Operational Transparency", copy: "Clear custody, clear reporting, clear accountability." },
-  { title: "Sustainable Progress", copy: "Efficiency and emissions reduction built into growth plans." },
-];
-
-const timeline = [
-  { year: "1960s", event: "Foundations in regional liquid storage" },
-  { year: "1980s", event: "Expansion into terminal berthing operations" },
-  { year: "2000s", event: "Pipeline corridors and digital monitoring" },
-  { year: "2010s", event: "Global shipping network integration" },
-  { year: "Today", event: "Multi-continent energy logistics leadership" },
+  {
+    title: "Customer-Centric Approach",
+    copy: "At Res Logistics, our clients are at the heart of everything we do. We take pride in delivering exceptional services tailored to meet their unique requirements. Through transparency, responsiveness, and a solutions-oriented approach, we work hand-in-hand with our clients to ensure success in every project.",
+    image: "/img/about-values-customer.jpg",
+    alt: "Two professionals reviewing plans on a tablet at an industrial site",
+  },
+  {
+    title: "Safety First",
+    copy: "Safety is paramount in all our operations. We adhere to the strictest industry regulations and implement rigorous safety protocols to protect our employees, clients, and the communities in which we operate. From routine safety drills to the maintenance of our facilities, we are committed to fostering a culture of safety and accountability.",
+    image: "/img/about-values-safety.jpg",
+    alt: "Industrial workers in safety helmets collaborating on site",
+  },
+  {
+    title: "Sustainability",
+    copy: "We are fully dedicated to minimizing the environmental footprint of our operations. From implementing energy-efficient technologies to reducing emissions, sustainability is a core value that shapes our decisions. Our goal is to operate in an eco-friendly manner, supporting the global shift toward greener energy solutions.",
+    image: "/img/about-values-3.jpg",
+    alt: "Clean energy landscape representing sustainable operations",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About Res Logistics"
-        title="Decades of moving the world’s energy"
-        description="We combine industrial scale with meticulous operational craft — building trust across terminals, pipelines, and oceans."
-        image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=2400&q=80"
-      />
+      {/* Hero — centered */}
+      <section className="relative isolate flex min-h-[72vh] items-center justify-center overflow-hidden pt-28 pb-20 md:min-h-[78vh]">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/img/about-hero-alt.jpg"
+            alt="Workers with safety helmets collaborating on site"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-navy-950/75" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/50" />
+        </div>
 
-      <section className="bg-navy-950 py-24">
-        <div className="section-pad container-regis grid gap-12 lg:grid-cols-2">
+        <div className="section-pad container-regis relative mx-auto max-w-3xl text-center">
           <Reveal>
-            <h2 className="font-display text-3xl font-bold text-white md:text-4xl">Mission</h2>
-            <p className="mt-4 text-steel-light leading-relaxed">
-              Deliver safe, reliable, and intelligent energy logistics that power industries
-              and communities worldwide — without compromise on integrity or stewardship.
+            <p className="mb-4 text-xs font-semibold tracking-[0.28em] text-cyan uppercase">
+              About Us
             </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="font-display text-3xl font-bold text-white md:text-4xl">Vision</h2>
-            <p className="mt-4 text-steel-light leading-relaxed">
-              To be the defining digital and physical presence of world-class energy logistics —
-              where engineering excellence and sustainability set the industry standard.
+            <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+              Trusted in Bulk Liquid Storage
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-steel-light sm:text-base md:text-lg">
+              With over five decades of experience, we have grown into one of
+              Europe’s most trusted names in bulk liquid storage, known for our
+              commitment to innovation, safety, and sustainability.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="bg-midnight py-24">
-        <div className="section-pad container-regis">
+      {/* Our Story — two columns */}
+      <section className="bg-navy-950 py-20 md:py-28">
+        <div className="section-pad container-regis grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <h2 className="font-display text-3xl font-bold text-white md:text-4xl">Core Values</h2>
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Our Story
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">
+              A Legacy of Excellence
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-steel-light md:text-base">
+              Established with the goal of offering reliable and safe storage
+              solutions, Res Logistics PTE Ltd began its operations in the
+              bustling port regions of the Netherlands. Over the years, we
+              expanded our infrastructure and services, leveraging our strategic
+              location at Europe’s busiest ports to become a premier player in
+              the global energy supply chain. Our growth is driven by our
+              unwavering dedication to customer satisfaction, cutting-edge
+              technology, and a proactive approach to adapting to the evolving
+              needs of the energy and logistics sectors.
+            </p>
           </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 0.06}>
-                <div className="rounded-2xl border border-white/10 bg-navy-900/40 p-6">
-                  <h3 className="font-display text-xl font-semibold text-cyan">{v.title}</h3>
-                  <p className="mt-2 text-sm text-steel-light">{v.copy}</p>
-                </div>
+
+          <Reveal delay={0.1}>
+            <div className="relative aspect-[16/11] overflow-hidden rounded-3xl">
+              <Image
+                src="/img/abt-hero.png"
+                alt="Res Logistics terminal operations and cargo handling"
+                fill
+                className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Who We Are Today — centered */}
+      <section className="bg-midnight py-20 md:py-28">
+        <div className="section-pad container-regis mx-auto max-w-3xl text-center">
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Who We Are Today
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">
+              Modern. Agile. Partner-focused.
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-steel-light md:text-base">
+              Today, Res Logistics PTE Ltd stands as a modern, agile company
+              with a forward-thinking approach to logistics and storage
+              management. Our highly skilled team of engineers, logisticians,
+              and industry experts ensure that we maintain the highest
+              operational standards across all our services. We pride ourselves
+              on being more than just a storage and logistics company; we are a
+              trusted partner to our clients, working collaboratively to deliver
+              customized solutions that meet their specific business needs.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-steel-light md:text-base">
+              Our company is recognized for its commitment to innovation,
+              constantly upgrading our facilities with the latest technologies
+              in tank storage, pipeline transport, and chemical blending. We
+              invest heavily in research and development to ensure that our
+              operations remain efficient, cost-effective, and environmentally
+              responsible.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Our Vision — centered */}
+      <section className="relative overflow-hidden bg-navy-900 py-20 md:py-28">
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <div className="absolute top-1/2 left-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan/10 blur-[100px]" />
+        </div>
+        <div className="section-pad container-regis relative mx-auto max-w-3xl text-center">
+          <Reveal>
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Our Vision
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">
+              Pioneering the Future of Energy Logistics
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-steel-light md:text-base">
+              At Res Logistics PTE Ltd, our vision is to continue leading the
+              energy and logistics sector by offering innovative and sustainable
+              solutions that drive the future of energy. We envision a world
+              where petroleum and chemical products are transported and stored
+              in ways that minimize environmental impact while maximizing
+              efficiency and safety.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-steel-light md:text-base">
+              Our mission is to constantly evolve in order to meet the dynamic
+              needs of the industry, supporting our clients as they navigate an
+              increasingly complex energy landscape. Whether through expanding
+              our storage capabilities, adopting greener technologies, or
+              optimizing our logistics network, we are committed to maintaining
+              our position at the cutting edge of industry innovation.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Values — three columns */}
+      <section className="bg-navy-950 py-20 md:py-28">
+        <div className="section-pad container-regis">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
+              Our Values
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">
+              Driving Excellence and Integrity
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {values.map((value, i) => (
+              <Reveal key={value.title} delay={i * 0.08}>
+                <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-navy-900/40">
+                  <div className="relative aspect-[16/11] overflow-hidden">
+                    <Image
+                      src={value.image}
+                      alt={value.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-display text-xl font-semibold text-white">
+                      {value.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-steel-light">
+                      {value.copy}
+                    </p>
+                  </div>
+                </article>
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-navy-950 py-24">
-        <div className="section-pad container-regis">
-          <Reveal>
-            <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
-              Growth Timeline
-            </h2>
-          </Reveal>
-          <ol className="mt-12 space-y-8 border-l border-cyan/30 pl-8">
-            {timeline.map((item, i) => (
-              <Reveal key={item.year} delay={i * 0.05}>
-                <li className="relative">
-                  <span className="absolute top-1.5 -left-[2.35rem] h-3 w-3 rounded-full bg-cyan" />
-                  <p className="text-sm font-semibold tracking-wide text-cyan">{item.year}</p>
-                  <p className="mt-1 text-lg text-white">{item.event}</p>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="bg-navy-900 py-24">
-        <div className="section-pad container-regis grid gap-10 sm:grid-cols-3">
-          <AnimatedCounter value={60} suffix="+" label="Years of Expertise" />
-          <AnimatedCounter value={12} suffix="+" label="Strategic Terminals" />
-          <AnimatedCounter value={40} suffix="+" label="Countries Served" />
         </div>
       </section>
     </>
