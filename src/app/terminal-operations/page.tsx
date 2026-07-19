@@ -15,8 +15,20 @@ export default function TerminalOperationsPage() {
       />
 
       <section className="bg-navy-950 py-24">
-        <div className="section-pad container-regis grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="section-pad container-regis grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
+            {
+              title: "24/7 Operations",
+              copy: "Our terminals operate around the clock to ensure continuous product movement, minimizing delays and optimizing logistics efficiency.",
+            },
+            {
+              title: "Advanced Infrastructure",
+              copy: "We use state-of-the-art technology for automated loading and unloading, tank monitoring, and product tracking to enhance safety and efficiency.",
+            },
+            {
+              title: "Global Connectivity",
+              copy: "Our terminals are strategically located in major ports, allowing for quick and efficient access to international shipping routes and distribution networks.",
+            },
             {
               title: "Vessels",
               copy: "Tanker coordination and berth window management.",
@@ -29,17 +41,13 @@ export default function TerminalOperationsPage() {
               title: "Trucking",
               copy: "Last-leg dispatch from terminal truck racks.",
             },
-            {
-              title: "Air Freight Links",
-              copy: "Critical spare and time-sensitive logistics support.",
-            },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06}>
-              <div className="rounded-2xl border border-white/10 bg-navy-900/40 p-6">
+              <div className="h-full rounded-2xl border border-white/10 bg-navy-900/40 p-6">
                 <h3 className="font-display text-xl font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm text-steel-light">{item.copy}</p>
+                <p className="mt-2 text-sm leading-relaxed text-steel-light">{item.copy}</p>
               </div>
             </Reveal>
           ))}
