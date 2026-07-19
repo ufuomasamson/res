@@ -15,7 +15,7 @@ export default function PipelinePage() {
         eyebrow="Pipeline Transport"
         title="Underground arteries of global energy"
         description="Glowing corridors of flow — engineered, monitored, and secured from origin to terminal gate."
-        image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2400&q=80"
+        image="/img/pipeline-transport.jpg"
       />
 
       <section className="bg-navy-950 py-24">
