@@ -14,7 +14,7 @@ export default function HomePage() {
       <WhoWeAre />
       <UnrivaledExpertise />
       <WhatWeDo />
-      <div id="global-network">
+      <div id="terminal-network">
         <GlobalNetwork />
       </div>
       <SustainabilityPreview />

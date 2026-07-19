@@ -9,7 +9,7 @@ export default function TerminalOperationsPage() {
         eyebrow="Terminal Operations"
         title="Ocean highways. Orchestrated arrivals."
         description="Massive tanker movements synchronized with terminal windows, inland transfer, and market timing."
-        image="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2400&q=80"
+        image="/img/Terminal-Operations.png"
         ctaHref="/contact"
         ctaLabel="Plan a Shipment"
       />
@@ -46,7 +46,7 @@ export default function TerminalOperationsPage() {
         </div>
       </section>
 
-      <div id="global-network">
+      <div id="terminal-network">
         <GlobalNetwork />
       </div>
     </>

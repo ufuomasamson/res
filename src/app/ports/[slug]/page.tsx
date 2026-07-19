@@ -54,7 +54,7 @@ export default async function PortPage({ params }: Props) {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button href="/contact">Speak with Our Team</Button>
-              <Button href="/#global-network" variant="secondary">
+              <Button href="/#terminal-network" variant="secondary">
                 Back to Network Map
               </Button>
             </div>

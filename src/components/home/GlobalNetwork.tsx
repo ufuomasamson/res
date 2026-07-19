@@ -174,7 +174,7 @@ export function GlobalNetwork() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <Reveal>
             <p className="text-xs font-semibold tracking-[0.22em] text-cyan uppercase">
-              Global Network
+              Terminal Network
             </p>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white md:text-5xl">
               Connected corridors across the energy world
