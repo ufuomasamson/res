@@ -64,7 +64,7 @@ export default function PipelinePage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
               { title: "Inlet", copy: "Metered entry with quality sampling and batch identification." },
-              { title: "Transit", copy: "SCADA-linked integrity and leak detection along the route." },
+              { title: "Transit", copy: "With real-time monitoring systems that track the flow of the product" },
               { title: "Arrival", copy: "Controlled discharge into tank farms or loading systems." },
             ].map((step, i) => (
               <Reveal key={step.title} delay={i * 0.08}>
