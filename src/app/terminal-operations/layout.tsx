@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terminal Operations",
   description:
-    "Interactive petroleum terminal operations — storage, dock, pipeline, and control center storytelling.",
+    "Global tanker routing, multimodal logistics, and illuminated shipping corridors across Res Logistics terminals.",
 };
 
 export default function TerminalLayout({

@@ -1,0 +1,140 @@
+Here is the content of the Logistics and Shipping page
+
+
+The hero section one centered column with a background image of a  Liquide Tanks in a factery:
+
+Header: Logistics and Shipping
+
+Paragraph: At Res Logistics PTE Ltd., our logistics solutions and shipping services are designed to support the seamless movement of petroleum products and chemicals across the globe. 
+
+
+Next is a two columns one side for header, other is for paragraph
+
+Header: Why Choose Hastveda Shipping B.V. for Your Shipping and Logistics Needs?
+
+Paragraph: At Res Logistics PTE Ltd., we bring together decades of experience, advanced infrastructure, and a commitment to sustainability to provide world-class logistics and shipping solutions. Whether you’re looking to store bulk liquids, transport them via pipeline or ship them across continents, we have the expertise and resources to make it happen. Our team works closely with each client to develop customized solutions that fit their specific needs, ensuring efficiency, safety, and reliability in every aspect of our operations.
+
+
+
+Next is 6 grid sections with an image header
+
+Grid 1. 
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid1.png
+
+Content:
+
+Chemical Blending
+
+We provide chemical blending services tailored to meet the specific needs of our clients. Whether you need customized fuel formulations or chemical additives blended to precise specifications, our blending operations are backed by sophisticated equipment and rigorous quality control measures.
+
+
+
+Grid 2.
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid2.png
+
+
+Content:
+
+Heating Services
+
+Certain petroleum products, such as heavy fuel oils, require temperature-controlled storage to maintain their integrity. Our heating services ensure that these products are stored at optimal temperatures, preventing solidification or degradation.
+
+
+Grid 3.
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid3.png
+
+Content:
+
+Integrated Logistics Solutions
+
+Our integrated logistics solutions cover every aspect of your product’s journey, from initial storage to final delivery. With comprehensive services that include road, rail, sea, and pipeline transportation, we ensure that your petroleum and chemical products move smoothly through the supply chain.
+
+
+Grid 4.
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid4.png
+
+Content:
+
+Warehousing
+
+For clients requiring secure storage of packaged goods, our warehousing services offer safe and controlled environments for petroleum products and chemicals. Whether you need storage for barrels, drums, or smaller containers, we have the infrastructure to accommodate a wide range of needs.
+
+
+Grid 5.
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid5.png
+
+Content:
+
+Fuel Quality Testing
+
+Ensuring the integrity of your products is essential. Our fuel quality testing services include comprehensive analysis of your petroleum and chemical products to ensure they meet industry standards. Our in-house labs use cutting-edge technology to conduct tests on fuel stability, emissions, and product composition.
+
+
+Grid 6. 
+
+Image: C:\Users\HP\Downloads\Regis Logistics.PTE.Ltd\public\img\grid6.png
+
+Content:
+
+Loading and Unloading
+
+At Hastveda Shipping B.V., our loading and unloading services are designed to handle petroleum products and chemicals with precision and care. We utilize advanced equipment and automated systems to ensure safe, efficient, and timely transfer of goods at our terminals.
+
+
+Next section 2 columns 
+
+centered header: Global Shipping Solutions
+
+Paragraph:At the heart of our logistics operations is a global shipping network designed to connect key energy markets. With strategic partnerships at major ports like Rotterdam, we ensure the seamless transport of products via sea, rail, and road, providing reliable and efficient delivery to any destination. Our port facilities are equipped with the latest technologies for fast loading and unloading, reducing downtime and ensuring that products reach their markets quickly.
+
+
+Column 1
+
+Sea Freight Solutions
+
+Sea transport is an essential component of our logistics solutions, offering a cost-effective way to move large volumes of petroleum products across the globe. Our fleet of vessels is designed to handle bulk liquids safely, with a focus on efficiency and environmental responsibility. From Europe to Asia and North America, our global reach ensures that your products are delivered on time, every time.
+
+Column 2
+
+Road and Rail Transport
+
+For land-based transport, we offer both road and rail solutions designed to move products quickly and safely. With an extensive network of trucks and rail services, we can provide customized logistics solutions that meet your specific needs, whether you require short-haul or long-distance transport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
