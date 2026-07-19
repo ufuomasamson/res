@@ -12,32 +12,32 @@ const grids = [
   {
     title: "Chemical Blending",
     copy: "We provide chemical blending services tailored to meet the specific needs of our clients. Whether you need customized fuel formulations or chemical additives blended to precise specifications, our blending operations are backed by sophisticated equipment and rigorous quality control measures.",
-    image: "/img/grid1.png",
+    image: "/img/logistics-grid-1.png",
   },
   {
     title: "Heating Services",
     copy: "Certain petroleum products, such as heavy fuel oils, require temperature-controlled storage to maintain their integrity. Our heating services ensure that these products are stored at optimal temperatures, preventing solidification or degradation.",
-    image: "/img/grid2.png",
+    image: "/img/logistics-grid-2.png",
   },
   {
     title: "Integrated Logistics Solutions",
     copy: "Our integrated logistics solutions cover every aspect of your product’s journey, from initial storage to final delivery. With comprehensive services that include road, rail, sea, and pipeline transportation, we ensure that your petroleum and chemical products move smoothly through the supply chain.",
-    image: "/img/grid3.png",
+    image: "/img/logistics-grid-3.png",
   },
   {
     title: "Warehousing",
     copy: "For clients requiring secure storage of packaged goods, our warehousing services offer safe and controlled environments for petroleum products and chemicals. Whether you need storage for barrels, drums, or smaller containers, we have the infrastructure to accommodate a wide range of needs.",
-    image: "/img/grid4.png",
+    image: "/img/logistics-grid-4.png",
   },
   {
     title: "Fuel Quality Testing",
     copy: "Ensuring the integrity of your products is essential. Our fuel quality testing services include comprehensive analysis of your petroleum and chemical products to ensure they meet industry standards. Our in-house labs use cutting-edge technology to conduct tests on fuel stability, emissions, and product composition.",
-    image: "/img/grid5.png",
+    image: "/img/logistics-grid-5.png",
   },
   {
     title: "Loading and Unloading",
     copy: "At Res Logistics PTE Ltd, our loading and unloading services are designed to handle petroleum products and chemicals with precision and care. We utilize advanced equipment and automated systems to ensure safe, efficient, and timely transfer of goods at our terminals.",
-    image: "/img/grid6.png",
+    image: "/img/logistics-grid-6.png",
   },
 ];
 
@@ -109,6 +109,7 @@ export default function LogisticsShippingPage() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    unoptimized
                     className="object-cover transition-transform duration-700 hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />

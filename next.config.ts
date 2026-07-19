@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // Serve public assets directly — more reliable on VPS without sharp issues
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

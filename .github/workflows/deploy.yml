@@ -24,7 +24,20 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            # Ensure logistics grid images exist after pull
+            ls -la public/img/logistics-grid-*.png
+
+            rm -rf .next
             npm ci
             npm run build
 
+            # Verify built output can see public assets
+            test -f public/img/logistics-grid-1.png
+            test -f public/img/logistics-grid-2.png
+            test -f public/img/logistics-grid-3.png
+            test -f public/img/logistics-grid-4.png
+            test -f public/img/logistics-grid-5.png
+            test -f public/img/logistics-grid-6.png
+
             pm2 restart res || pm2 start npm --name res -- start
+            pm2 save
