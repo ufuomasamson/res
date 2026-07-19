@@ -5,16 +5,22 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Liquid Storage & Handling",
   description:
-    "Petroleum and liquid storage terminals with advanced monitoring, safety, and inventory control.",
+    "Petroleum and liquid storage terminals with large-scale capacity, varied tank types, and temperature-controlled storage.",
 };
 
 const facets = [
-  { title: "Storage", copy: "Multi-product tank farms with segregated systems and coating integrity programs." },
-  { title: "Handling", copy: "Manifold routing, pumping capacity, and precise custody transfer." },
-  { title: "Safety", copy: "Fire systems, vapor control, and redundant emergency protocols." },
-  { title: "Monitoring", copy: "Radar gauging, temperature profiles, and remote operations visibility." },
-  { title: "Inspection", copy: "Scheduled integrity assessments and non-destructive evaluation." },
-  { title: "Inventory", copy: "Real-time stock accounting aligned to commercial and regulatory needs." },
+  {
+    title: "Large-Scale Capacity",
+    copy: "Our tanks have the ability to store significant volumes of liquids, ensuring we can meet the needs of both small-scale and large-scale operations. With tanks ranging in size from 50,000 cubic meters to over 500,000 cubic meters, we offer flexible storage options to cater to diverse client requirements.",
+  },
+  {
+    title: "Variety of Tank Types",
+    copy: "To provide the highest level of service, we offer floating roof tanks, fixed roof tanks, and spherical tanks, each designed to handle specific product types. Our storage options are tailored to minimize evaporation losses, ensure the integrity of the stored liquids, and meet all industry-specific requirements.",
+  },
+  {
+    title: "Temperature-Controlled Storage",
+    copy: "For products that require specific storage conditions, such as chemical compounds or biofuels, we offer temperature-controlled tanks. Our advanced temperature regulation systems ensure that products are stored at optimal conditions, maintaining their quality and stability over extended periods.",
+  },
 ];
 
 export default function LiquidStoragePage() {
@@ -24,7 +30,7 @@ export default function LiquidStoragePage() {
         eyebrow="Liquid Storage & Handling"
         title="Tank farms built for absolute custody"
         description="Dark industrial scale. Instrument-grade precision. Storage you can trust under every condition."
-        image="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=2400&q=80"
+        image="/img/company-overview.png"
       />
 
       <section className="relative overflow-hidden bg-navy-950 py-24">
@@ -68,12 +74,12 @@ export default function LiquidStoragePage() {
       </section>
 
       <section className="bg-navy-900 py-24">
-        <div className="section-pad container-regis grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="section-pad container-regis grid gap-5 md:grid-cols-3">
           {facets.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.05}>
-              <div className="rounded-2xl border border-white/10 bg-navy-950/50 p-6">
+              <div className="h-full rounded-2xl border border-white/10 bg-navy-950/50 p-6 md:p-7">
                 <h3 className="font-display text-xl font-semibold text-white">{f.title}</h3>
-                <p className="mt-2 text-sm text-steel-light">{f.copy}</p>
+                <p className="mt-3 text-sm leading-relaxed text-steel-light">{f.copy}</p>
               </div>
             </Reveal>
           ))}
