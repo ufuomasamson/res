@@ -25,8 +25,10 @@ export default function PipelinePage() {
               Energy pulses through every mile
             </h2>
             <p className="mt-4 max-w-2xl text-steel-light">
-              Oil enters the system, travels through buried networks under continuous
-              surveillance, and arrives at terminals ready for storage or outbound shipping.
+              Our pipeline service provides efficient, safe, and cost-effective
+              transportation of petroleum and liquid products, across Singapore
+              and Asia, our pipelines services are designed to meet the evolving
+              needs of the energy sector
             </p>
           </Reveal>
 
