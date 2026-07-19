@@ -77,9 +77,9 @@ export default function AboutPage() {
             <p className="mt-5 text-sm leading-relaxed text-steel-light md:text-base">
               Established with the goal of offering reliable and safe storage
               solutions, Res Logistics PTE Ltd began its operations in the
-              bustling port regions of the Netherlands. Over the years, we
+              bustling port regions of Singapore. Over the years, we
               expanded our infrastructure and services, leveraging our strategic
-              location at Europe’s busiest ports to become a premier player in
+              location at Asia’s busiest ports to become a premier player in
               the global energy supply chain. Our growth is driven by our
               unwavering dedication to customer satisfaction, cutting-edge
               technology, and a proactive approach to adapting to the evolving
