@@ -16,7 +16,7 @@ export default function SustainabilityPage() {
         eyebrow="Sustainability"
         title="Progress measured in cleaner energy movement"
         description="A brighter operational atmosphere — greens, growth, and rigorous environmental accountability."
-        image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2400&q=80"
+        image="/img/sustainability.jpg"
         tone="nature"
       />
 
@@ -27,8 +27,11 @@ export default function SustainabilityPage() {
               Environmental Commitment
             </h2>
             <p className="mt-4 max-w-2xl text-steel-light">
-              We treat sustainability as an operating discipline: reducing intensity, raising
-              efficiency, and embedding safety into every process design.
+              One of the pillars of our sustainability efforts is our focus on minimizing the
+              environmental impact of our operations. As a leading logistics and storage company,
+              we understand that our activities—from storage tank operations to product handling
+              and transportation—can significantly affect the environment if not managed
+              responsibly.
             </p>
           </Reveal>
 
