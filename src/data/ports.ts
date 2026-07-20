@@ -9,6 +9,7 @@ export type Port = {
   brief: string;
   content: string;
   metric: string;
+  image: string;
   /** Visual pin offset on the equirectangular map (px in 1000×500 space) */
   mapOffset?: { x: number; y: number };
   /** Label offset relative to the pin */
@@ -30,6 +31,7 @@ export const PORTS: Port[] = [
     content:
       "Our terminal in Houston, one of the largest energy hubs in the world, is crucial for petroleum product storage and distribution in North America. The Houston terminal is well-equipped to handle both inbound and outbound shipments of crude oil and refined products, serving the needs of refineries, chemical plants, and international markets.",
     metric: "North America hub",
+    image: "/img/houston.png",
   },
   {
     id: "rotterdam",
@@ -44,6 +46,7 @@ export const PORTS: Port[] = [
     content:
       "The port of Rotterdam is a very convenient choice for the supply and transit of crude oil in Europe. The crude oil in Rotterdam comes mainly from the Middle East and the North Sea region. Since the tank terminals are located directly on deep water and Rotterdam has no locks or tides, Rotterdam can accommodate even the largest oil tankers such as ULCCs and supertankers with a capacity of 500,000 DWT. Through an extensive network of pipelines, the crude oil is transported efficiently and safely to the refineries.",
     metric: "ULCC capable",
+    image: "/img/rotterdam.png",
   },
   {
     id: "jurong",
@@ -58,6 +61,7 @@ export const PORTS: Port[] = [
     content:
       "The Jurong terminal in Singapore serves as a vital hub for petroleum product storage and distribution in the Asia-Pacific region. With Singapore being one of the world’s largest trading and bunkering ports, our terminal here offers unrivaled connectivity to global markets and plays a key role in facilitating the energy trade in Asia.",
     metric: "Asia trading hub",
+    image: "/img/jurong.png",
     mapOffset: { x: -34, y: 28 },
     labelOffset: { x: -6, y: 18, anchor: "end" },
     mapLabel: "Jurong",
@@ -75,6 +79,7 @@ export const PORTS: Port[] = [
     content:
       "Ningbo China Terminal’s prime location offers unparalleled access to key shipping routes in the Asia-Pacific region. Positioned at the crossroads of global trade, the terminal connects major markets in Asia, Europe, and the Middle East, making it an essential hub for international petrochemical logistics.",
     metric: "Cross-trade access",
+    image: "/img/ningbo-port.png",
   },
   {
     id: "fujairah",
@@ -89,6 +94,7 @@ export const PORTS: Port[] = [
     content:
       "Located in the heart of the Middle East, our Fujairah terminal offers world-class storage and logistical support for the region’s booming oil and gas industry. As one of the world’s busiest oil storage and trading hubs, the Fujairah terminal provides services essential for the import and export of petroleum products across the Arabian Gulf, Asia, and Africa.",
     metric: "Gulf trading hub",
+    image: "/img/fujairah.png",
   },
   {
     id: "johor",
@@ -103,6 +109,7 @@ export const PORTS: Port[] = [
     content:
       "Our tank storage facility at Johor terminal port is well equipped to handle both inbound and outbound shipments of crude oil and petrochemical products.",
     metric: "Regional tank farm",
+    image: "/img/johor.png",
     mapOffset: { x: 36, y: -30 },
     labelOffset: { x: 8, y: -12, anchor: "start" },
     mapLabel: "Johor",

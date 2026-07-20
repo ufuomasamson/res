@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { PORTS, getPortBySlug } from "@/data/ports";
@@ -34,17 +34,52 @@ export default async function PortPage({ params }: Props) {
 
   return (
     <>
-      <PageHero
-        eyebrow={`${port.region} Terminal`}
-        title={port.label}
-        description={port.brief}
-        image="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2400&q=80"
-        ctaHref="/contact"
-        ctaLabel="Contact Operations"
-      />
+      {/* Text-only hero — no background image */}
+      <section className="bg-navy-950 pt-32 pb-12 md:pt-36 md:pb-16">
+        <div className="section-pad container-regis mx-auto max-w-3xl text-center">
+          <Reveal>
+            <p className="mb-4 text-xs font-semibold tracking-[0.28em] text-cyan uppercase">
+              {port.region} Terminal
+            </p>
+            <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+              {port.label}
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-steel-light sm:text-base md:text-lg">
+              {port.brief}
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button href="/contact">Contact Operations</Button>
+              <Button href="/#terminal-network" variant="secondary">
+                Back to Network Map
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-      <section className="bg-navy-950 py-24">
-        <div className="section-pad container-regis max-w-3xl">
+      {/* Port image — centered below hero */}
+      <section className="bg-navy-950 pb-16 md:pb-20">
+        <div className="section-pad container-regis">
+          <Reveal>
+            <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
+              <div className="relative aspect-[16/10] w-full bg-midnight">
+                <Image
+                  src={port.image}
+                  alt={`${port.name} terminal`}
+                  fill
+                  unoptimized
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 896px) 100vw, 896px"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-midnight py-20 md:py-24">
+        <div className="section-pad container-regis mx-auto max-w-3xl">
           <Reveal>
             <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
               Terminal overview
@@ -54,15 +89,15 @@ export default async function PortPage({ params }: Props) {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button href="/contact">Speak with Our Team</Button>
-              <Button href="/#terminal-network" variant="secondary">
-                Back to Network Map
+              <Button href="/terminal-operations" variant="secondary">
+                Terminal Operations
               </Button>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="border-t border-white/5 bg-midnight py-16">
+      <section className="border-t border-white/5 bg-navy-950 py-16">
         <div className="section-pad container-regis">
           <p className="text-xs font-semibold tracking-[0.2em] text-cyan uppercase">
             Other Terminals
