@@ -16,13 +16,14 @@ export default function PipelinePage() {
         title="Underground arteries of global energy"
         description="Glowing corridors of flow — engineered, monitored, and secured from origin to terminal gate."
         image="/img/pipeline-transport.jpg"
+        centered
       />
 
       <section className="bg-navy-950 py-24">
         <div className="section-pad container-regis">
           <Reveal>
             <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
-              Energy pulses through every mile
+              Pipeline Service
             </h2>
             <p className="mt-4 max-w-2xl text-steel-light">
               Our pipeline service provides efficient, safe, and cost-effective

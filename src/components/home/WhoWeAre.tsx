@@ -30,7 +30,7 @@ export function WhoWeAre() {
             <p className="mt-5 text-base leading-relaxed text-steel-light md:text-lg">
               With many years of industry experience, Res Logistics PTE LTD has
               an unparalleled understanding of the petroleum and energy markets.
-              Since our inception in 1964, we have grown and adapted to the
+              Since our inception, we have grown and adapted to the
               rapidly changing landscape, continually refining our services and
               technologies to remain at the forefront of the industry. Our
               longevity is a testament to our reliability, efficiency, and
