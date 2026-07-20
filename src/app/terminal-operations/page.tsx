@@ -7,12 +7,16 @@ export default function TerminalOperationsPage() {
     <>
       <PageHero
         eyebrow="Terminal Operations"
-        title="Ocean highways. Orchestrated arrivals."
-        description="Massive tanker movements synchronized with terminal windows, inland transfer, and market timing."
+        title="Our terminal operations are the backbone of our global logistics network"
+        description="Strategically located in key international ports, our terminals are equipped to handle wide range of petrochemicals products such as crude oil, diesel En590, jet fuel and other chemical products."
         image="/img/Terminal-Operations.png"
         ctaHref="/contact"
         ctaLabel="Plan a Shipment"
       />
+
+      <div id="terminal-network">
+        <GlobalNetwork />
+      </div>
 
       <section className="bg-navy-950 py-24">
         <div className="section-pad container-regis grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,10 +57,6 @@ export default function TerminalOperationsPage() {
           ))}
         </div>
       </section>
-
-      <div id="terminal-network">
-        <GlobalNetwork />
-      </div>
     </>
   );
 }
