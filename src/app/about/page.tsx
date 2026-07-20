@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "With over five decades of experience, Res Logistics PTE Ltd is a trusted partner in bulk liquid storage, logistics, and sustainable energy supply chains.",
+    "With years of experience, Res Logistics PTE Ltd is a trusted partner in bulk liquid storage, logistics, and sustainable energy supply chains.",
 };
 
 const values = [
@@ -56,7 +56,7 @@ export default function AboutPage() {
               Trusted in Bulk Liquid Storage
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-steel-light sm:text-base md:text-lg">
-              With over five decades of experience, we have grown into one of
+              With years of experience, we have grown into one of
               Europe’s most trusted names in bulk liquid storage, known for our
               commitment to innovation, safety, and sustainability.
             </p>

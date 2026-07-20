@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -46,23 +47,13 @@ function Particles() {
 }
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [reduceMotion, setReduceMotion] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const moreId = useId();
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => {
-      setReduceMotion(mq.matches);
-      const video = videoRef.current;
-      if (!video) return;
-      if (mq.matches) {
-        video.pause();
-      } else {
-        void video.play().catch(() => {});
-      }
-    };
+    const apply = () => setReduceMotion(mq.matches);
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
@@ -71,18 +62,15 @@ export function Hero() {
   return (
     <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
       <div className="absolute inset-0 -z-10">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay={!reduceMotion}
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <Image
+          src="/img/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
           aria-hidden="true"
-        >
-          <source src="/img/bg-v.mp4" type="video/mp4" />
-        </video>
+        />
 
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/82 to-navy-900/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />

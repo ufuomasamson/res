@@ -16,6 +16,12 @@ const serviceLinks = [
   { href: "/services/logistics-shipping", label: "Logistics & Shipping" },
 ];
 
+const companyDetails = [
+  "Registration No: 201929280K",
+  "Singapore Head Office: 1 Corporation Drive, #10-04, Singapore 619775.",
+  "Europe Branch office: Stationsplein 45, 3013 Ap Rotterdam Netherlands",
+];
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/5 bg-navy-950">
@@ -39,6 +45,11 @@ export function Footer() {
             Engineering excellence across petroleum storage, terminal operations, and
             global energy logistics — delivering trust at every mile.
           </p>
+          <ul className="mt-6 space-y-2 text-sm leading-relaxed text-steel-light">
+            {companyDetails.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
           <div className="mt-8">
             <GlobeFooter />
           </div>
@@ -99,12 +110,15 @@ export function Footer() {
 
       <div className="section-pad container-regis relative flex flex-col gap-3 border-t border-white/5 py-6 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Res Logistics PTE Ltd. All rights reserved.</p>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <Link href="/contact" className="hover:text-white">
             Privacy
           </Link>
           <Link href="/contact" className="hover:text-white">
             Terms
+          </Link>
+          <Link href="/refund-policy" className="hover:text-white">
+            Refund Policy
           </Link>
         </div>
       </div>

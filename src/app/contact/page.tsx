@@ -30,7 +30,12 @@ export default function ContactPage() {
               {
                 icon: MapPin,
                 title: "Headquarters",
-                copy: "Singapore · Global operations across energy corridors",
+                copy: "Singapore Head Office: 1 Corporation Drive, #10-04, Singapore 619775.",
+              },
+              {
+                icon: MapPin,
+                title: "Europe Branch Office",
+                copy: "Stationsplein 45, 3013 Ap Rotterdam Netherlands",
               },
               {
                 icon: Phone,
@@ -60,6 +65,15 @@ export default function ContactPage() {
                 </Reveal>
               );
             })}
+
+            <Reveal delay={0.18}>
+              <div className="rounded-2xl border border-white/10 bg-navy-900/40 p-5">
+                <p className="font-semibold text-white">Registration</p>
+                <p className="mt-2 text-sm leading-relaxed text-steel-light">
+                  Registration No: 201929280K
+                </p>
+              </div>
+            </Reveal>
 
             <Reveal delay={0.2}>
               <div className="overflow-hidden rounded-2xl border border-white/10">

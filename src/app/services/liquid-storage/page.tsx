@@ -29,7 +29,7 @@ export default function LiquidStoragePage() {
       <PageHero
         eyebrow="Liquid Storage & Handling"
         title="Tank farms built for absolute custody"
-        description="With over five decades of experience, our liquid storage facilities are designed to handle a wide variety of products, ranging from crude oil and refined petroleum products to chemicals, biofuels, and other specialized liquids. Our advanced infrastructure, stringent safety standards, and commitment to operational excellence have positioned us as one of the leading storage providers in the Asia and beyond."
+        description="With years of experience, our liquid storage facilities are designed to handle a wide variety of products, ranging from crude oil and refined petroleum products to chemicals, biofuels, and other specialized liquids. Our advanced infrastructure, stringent safety standards, and commitment to operational excellence have positioned us as one of the leading storage providers in the Asia and beyond."
         image="/img/liquid-storage.jpg"
         centered
       />
