@@ -3,18 +3,18 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function HomeCTA() {
   return (
-    <section className="relative isolate overflow-hidden py-28 md:py-36">
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=2400&q=80')",
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-navy-950/80" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950 via-navy-950/70 to-transparent" />
+    <section className="relative overflow-hidden py-28 md:py-36">
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+        <div
+          className="absolute inset-0 bg-navy-950 bg-cover bg-center"
+          style={{ backgroundImage: "url('/img/hero-bg.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-navy-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/85 to-navy-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/45 to-navy-950/50" />
+      </div>
 
-      <div className="section-pad container-regis relative">
+      <div className="section-pad container-regis relative z-10">
         <Reveal>
           <h2 className="max-w-3xl font-display text-3xl font-bold text-white md:text-5xl lg:text-6xl">
             Ready to move energy with a world-class partner?

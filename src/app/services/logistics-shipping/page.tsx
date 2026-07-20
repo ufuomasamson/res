@@ -45,8 +45,8 @@ export default function LogisticsShippingPage() {
   return (
     <>
       {/* Centered hero — liquid tanks */}
-      <section className="relative isolate flex min-h-[68vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[74vh] md:pt-12">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative flex min-h-[68vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[74vh] md:pt-12">
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
           <Image
             src="/img/company-overview.png"
             alt="Liquid storage tanks at an industrial facility"
@@ -56,10 +56,11 @@ export default function LogisticsShippingPage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-950/78" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/35 to-navy-950/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/88 to-navy-900/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/55" />
         </div>
 
-        <div className="section-pad container-regis relative mx-auto max-w-3xl text-center">
+        <div className="section-pad container-regis relative z-10 mx-auto max-w-3xl text-center">
           <Reveal>
             <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
               Logistics and Shipping

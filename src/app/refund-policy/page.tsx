@@ -30,6 +30,7 @@ export default function RefundPolicyPage() {
         title="Refund Policy"
         description="Review this policy carefully before engaging in any of our services."
         centered
+        overlayStrength="heavy"
       />
 
       <section className="bg-navy-950 py-24">

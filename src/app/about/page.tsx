@@ -33,8 +33,8 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero — centered */}
-      <section className="relative isolate flex min-h-[72vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[78vh] md:pt-12">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[78vh] md:pt-12">
+        <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
           <Image
             src="/img/about-hero-alt.jpg"
             alt="Workers with safety helmets collaborating on site"
@@ -44,10 +44,11 @@ export default function AboutPage() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-navy-950/75" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/88 to-navy-900/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/55" />
         </div>
 
-        <div className="section-pad container-regis relative mx-auto max-w-3xl text-center">
+        <div className="section-pad container-regis relative z-10 mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="mb-4 text-xs font-semibold tracking-[0.28em] text-cyan uppercase">
               About Us

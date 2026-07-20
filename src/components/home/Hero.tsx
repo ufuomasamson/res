@@ -60,8 +60,8 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden pb-16 pt-10 md:pb-20 md:pt-12">
-      <div className="absolute inset-0 -z-10">
+    <section className="relative flex min-h-[100dvh] items-center overflow-hidden pb-16 pt-10 md:pb-20 md:pt-12">
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
         <Image
           src="/img/hero-bg.jpg"
           alt=""
@@ -72,12 +72,13 @@ export function Hero() {
           aria-hidden="true"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/82 to-navy-900/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
+        <div className="absolute inset-0 bg-navy-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/88 to-navy-900/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/55" />
         {!reduceMotion && <Particles />}
       </div>
 
-      <div className="section-pad container-regis relative w-full">
+      <div className="section-pad container-regis relative z-10 w-full">
         <div className="max-w-2xl">
           <p className="mb-3 font-display text-[11px] font-semibold tracking-[0.28em] text-cyan uppercase sm:text-xs">
             Welcome to Res Logistics PTE LTD

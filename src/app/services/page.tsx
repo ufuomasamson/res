@@ -41,7 +41,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="End-to-end energy movement"
         description="From tank to terminal to ocean — capabilities designed as one connected system."
-        image="https://images.unsplash.com/photo-1581094794329-cbcde1fd0652?auto=format&fit=crop&w=2400&q=80"
+        image="/img/company-overview.png"
       />
 
       <section className="bg-navy-950 py-24">

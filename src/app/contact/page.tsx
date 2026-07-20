@@ -20,7 +20,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Speak with Res Logistics"
         description="Terminal coordination, commercial inquiries, and emergency response — we’re ready."
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80"
+        image="/img/hero-bg.jpg"
       />
 
       <section className="bg-navy-950 py-24">
@@ -80,8 +80,7 @@ export default function ContactPage() {
                 <div
                   className="aspect-[4/3] bg-cover bg-center"
                   style={{
-                    backgroundImage:
-                      "url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80')",
+                    backgroundImage: "url('/img/hero-bg.jpg')",
                   }}
                   role="img"
                   aria-label="Office location map visualization"

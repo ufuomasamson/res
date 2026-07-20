@@ -9,39 +9,77 @@ type PageHeroProps = {
   ctaLabel?: string;
   tone?: "industrial" | "nature";
   centered?: boolean;
+  overlayStrength?: "default" | "strong" | "heavy";
 };
+
+const overlayPresets = {
+  industrial: {
+    default: {
+      solid: "bg-navy-950/60",
+      horizontal: "bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-900/55",
+      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/50",
+    },
+    strong: {
+      solid: "bg-navy-950/75",
+      horizontal: "bg-gradient-to-r from-navy-950/98 via-navy-950/90 to-navy-900/70",
+      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/65",
+    },
+    heavy: {
+      solid: "bg-navy-950/88",
+      horizontal: "bg-gradient-to-r from-navy-950 via-navy-950/95 to-navy-900/85",
+      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/80",
+    },
+  },
+  nature: {
+    default: {
+      solid: "bg-[#071a14]/70",
+      horizontal: "bg-gradient-to-r from-[#071a14]/95 via-[#0a2a22]/85 to-[#0c3328]/55",
+      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/45 to-[#071a14]/55",
+    },
+    strong: {
+      solid: "bg-[#071a14]/82",
+      horizontal: "bg-gradient-to-r from-[#071a14] via-[#0a2a22]/92 to-[#0c3328]/70",
+      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/60 to-[#071a14]/70",
+    },
+    heavy: {
+      solid: "bg-[#071a14]/92",
+      horizontal: "bg-gradient-to-r from-[#071a14] via-[#0a2a22]/98 to-[#0c3328]/85",
+      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/75 to-[#071a14]/85",
+    },
+  },
+} as const;
 
 export function PageHero({
   eyebrow,
   title,
   description,
-  image = "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2400&q=80",
+  image = "/img/hero-bg.jpg",
   ctaHref,
   ctaLabel,
   tone = "industrial",
   centered = false,
+  overlayStrength = "default",
 }: PageHeroProps) {
-  const overlay =
-    tone === "nature"
-      ? "bg-gradient-to-r from-[#071a14]/90 via-[#0a2a22]/75 to-[#0c3328]/40"
-      : "bg-gradient-to-r from-navy-950 via-navy-950/85 to-navy-900/50";
+  const overlay = overlayPresets[tone][overlayStrength];
 
   return (
     <section
-      className={`relative isolate flex min-h-[70vh] overflow-hidden pb-16 pt-10 md:min-h-[75vh] md:pb-0 md:pt-12 ${
+      className={`relative flex min-h-[70vh] overflow-hidden pb-16 pt-10 md:min-h-[75vh] md:pb-0 md:pt-12 ${
         centered ? "items-center justify-center" : "items-end md:items-center"
       }`}
     >
-      <div className="absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-navy-950 bg-cover bg-center"
           style={{ backgroundImage: `url('${image}')` }}
         />
-        <div className={`absolute inset-0 ${overlay}`} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/30" />
+        <div className={`absolute inset-0 ${overlay.solid}`} />
+        <div className={`absolute inset-0 ${overlay.horizontal}`} />
+        <div className={`absolute inset-0 ${overlay.vertical}`} />
       </div>
+
       <div
-        className={`section-pad container-regis relative w-full ${
+        className={`section-pad container-regis relative z-10 w-full ${
           centered ? "mx-auto max-w-3xl text-center" : ""
         }`}
       >
