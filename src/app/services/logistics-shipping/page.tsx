@@ -45,7 +45,7 @@ export default function LogisticsShippingPage() {
   return (
     <>
       {/* Centered hero — liquid tanks */}
-      <section className="relative isolate flex min-h-[68vh] items-center justify-center overflow-hidden pt-28 pb-20 md:min-h-[74vh]">
+      <section className="relative isolate flex min-h-[68vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[74vh] md:pt-12">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/img/company-overview.png"

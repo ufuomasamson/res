@@ -28,7 +28,7 @@ export function PageHero({
 
   return (
     <section
-      className={`relative isolate flex min-h-[70vh] overflow-hidden pb-16 pt-32 md:min-h-[75vh] md:pb-0 ${
+      className={`relative isolate flex min-h-[70vh] overflow-hidden pb-16 pt-10 md:min-h-[75vh] md:pb-0 md:pt-12 ${
         centered ? "items-center justify-center" : "items-end md:items-center"
       }`}
     >

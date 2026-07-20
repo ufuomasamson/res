@@ -35,7 +35,7 @@ export default async function PortPage({ params }: Props) {
   return (
     <>
       {/* Text-only hero — no background image */}
-      <section className="bg-navy-950 pt-32 pb-12 md:pt-36 md:pb-16">
+      <section className="bg-navy-950 pb-12 pt-10 md:pb-16 md:pt-12">
         <div className="section-pad container-regis mx-auto max-w-3xl text-center">
           <Reveal>
             <p className="mb-4 text-xs font-semibold tracking-[0.28em] text-cyan uppercase">

@@ -60,7 +60,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
+    <section className="relative isolate flex min-h-[100dvh] items-center overflow-hidden pb-16 pt-10 md:pb-20 md:pt-12">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/img/hero-bg.jpg"

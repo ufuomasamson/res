@@ -39,17 +39,9 @@ const links = [
 
 export function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -65,13 +57,23 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy-950 transition-all duration-500 ${
-        scrolled
-          ? "py-2.5 shadow-[0_8px_40px_rgba(0,0,0,0.35)]"
-          : "py-4"
-      }`}
-    >
+    <>
+      <div className="sticky top-0 z-[60] border-b border-cyan/20 bg-navy-900/95 backdrop-blur-md">
+        <div className="section-pad container-regis flex justify-center py-2 sm:py-2.5">
+          <Link
+            href="/refund-policy"
+            className={`inline-flex w-full max-w-xl cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-center text-xs font-semibold tracking-wide transition-all sm:w-auto sm:text-sm ${
+              pathname === "/refund-policy"
+                ? "bg-cyan text-navy-950"
+                : "bg-cyan/15 text-cyan ring-1 ring-cyan/30 hover:bg-cyan hover:text-navy-950"
+            }`}
+          >
+            Res Logistics Refund Policy
+          </Link>
+        </div>
+      </div>
+
+      <header className="relative z-40 border-b border-white/10 bg-navy-950 py-3 md:py-4">
       <div className="section-pad container-regis flex items-center justify-between gap-6">
         <Link
           href="/"
@@ -84,9 +86,7 @@ export function Navbar() {
             width={220}
             height={56}
             priority
-            className={`h-9 w-auto object-contain transition-all duration-500 md:h-11 ${
-              scrolled ? "scale-95 opacity-95" : "scale-100"
-            } group-hover:opacity-100`}
+            className="h-9 w-auto object-contain transition-opacity duration-300 group-hover:opacity-100 md:h-11"
           />
         </Link>
 
@@ -240,6 +240,7 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+      </header>
+    </>
   );
 }

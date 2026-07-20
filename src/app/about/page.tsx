@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero — centered */}
-      <section className="relative isolate flex min-h-[72vh] items-center justify-center overflow-hidden pt-28 pb-20 md:min-h-[78vh]">
+      <section className="relative isolate flex min-h-[72vh] items-center justify-center overflow-hidden pb-20 pt-10 md:min-h-[78vh] md:pt-12">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/img/about-hero-alt.jpg"
