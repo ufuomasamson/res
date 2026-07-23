@@ -37,10 +37,9 @@ export default function RefundPolicyPage() {
         <div className="section-pad container-regis mx-auto max-w-3xl">
           <Reveal>
             <p className="text-base leading-relaxed text-steel-light md:text-lg">
-              Kindly review this policy carefully before engaging in any of our service, our refund
-              policy is designed to protect both our clients and our company, ensuring that all
-              service agreements are honored fairly. such as our TSA/TSR/Vessel Lease /CPA/Tanker
-              Lease/Endorsement
+              Our refund policy is designed to protect both our clients and our company, ensuring
+              that all service agreements are honored fairly. such as our TSA/TSR/Vessel Lease
+              /CPA/Tanker Lease/Endorsement
             </p>
           </Reveal>
 
