@@ -6,6 +6,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, MapPin, Phone, Clock } from "lucide-react";
 
+const SINGAPORE_HEAD_OFFICE =
+  "1 Corporation Drive, #10-04, Singapore 619775";
+
+const singaporeMapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(SINGAPORE_HEAD_OFFICE)}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
@@ -30,7 +35,7 @@ export default function ContactPage() {
               {
                 icon: MapPin,
                 title: "Headquarters",
-                copy: "Singapore Head Office: 1 Corporation Drive, #10-04, Singapore 619775.",
+                copy: `Singapore Head Office: ${SINGAPORE_HEAD_OFFICE}.`,
               },
               {
                 icon: MapPin,
@@ -76,15 +81,31 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <div className="overflow-hidden rounded-2xl border border-white/10">
-                <div
-                  className="aspect-[4/3] bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/img/contact-p.jpg')",
-                  }}
-                  role="img"
-                  aria-label="Office location map visualization"
-                />
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-navy-900/40">
+                <div className="border-b border-white/10 px-5 py-4">
+                  <p className="font-semibold text-white">Headquarters Location</p>
+                  <p className="mt-1 text-sm text-steel-light">{SINGAPORE_HEAD_OFFICE}</p>
+                </div>
+                <div className="relative aspect-[4/3] w-full">
+                  <iframe
+                    title="Res Logistics Singapore Head Office map"
+                    src={singaporeMapEmbedUrl}
+                    className="absolute inset-0 h-full w-full border-0"
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div className="border-t border-white/10 px-5 py-3">
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SINGAPORE_HEAD_OFFICE)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-cyan transition-colors hover:text-electric"
+                  >
+                    Open in Google Maps
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>
