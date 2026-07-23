@@ -29,8 +29,8 @@ export default function RefundPolicyPage() {
         eyebrow="Legal"
         title="Refund Policy"
         description="Review this policy carefully before engaging in any of our services."
+        image="/img/refund-policy.jpg"
         centered
-        overlayStrength="heavy"
       />
 
       <section className="bg-navy-950 py-24">

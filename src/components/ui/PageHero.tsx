@@ -15,36 +15,36 @@ type PageHeroProps = {
 const overlayPresets = {
   industrial: {
     default: {
-      solid: "bg-navy-950/60",
-      horizontal: "bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-900/55",
-      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/40 to-navy-950/50",
+      solid: "bg-navy-950/35",
+      horizontal: "bg-gradient-to-r from-navy-950/75 via-navy-950/55 to-navy-900/35",
+      vertical: "bg-gradient-to-t from-navy-950/75 via-transparent to-navy-950/25",
     },
     strong: {
-      solid: "bg-navy-950/75",
-      horizontal: "bg-gradient-to-r from-navy-950/98 via-navy-950/90 to-navy-900/70",
-      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/65",
+      solid: "bg-navy-950/50",
+      horizontal: "bg-gradient-to-r from-navy-950/85 via-navy-950/65 to-navy-900/45",
+      vertical: "bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-navy-950/40",
     },
     heavy: {
-      solid: "bg-navy-950/88",
-      horizontal: "bg-gradient-to-r from-navy-950 via-navy-950/95 to-navy-900/85",
-      vertical: "bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/80",
+      solid: "bg-navy-950/60",
+      horizontal: "bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-900/55",
+      vertical: "bg-gradient-to-t from-navy-950/90 via-navy-950/40 to-navy-950/50",
     },
   },
   nature: {
     default: {
-      solid: "bg-[#071a14]/70",
-      horizontal: "bg-gradient-to-r from-[#071a14]/95 via-[#0a2a22]/85 to-[#0c3328]/55",
-      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/45 to-[#071a14]/55",
+      solid: "bg-[#071a14]/40",
+      horizontal: "bg-gradient-to-r from-[#071a14]/75 via-[#0a2a22]/55 to-[#0c3328]/35",
+      vertical: "bg-gradient-to-t from-[#071a14]/75 via-transparent to-[#071a14]/25",
     },
     strong: {
-      solid: "bg-[#071a14]/82",
-      horizontal: "bg-gradient-to-r from-[#071a14] via-[#0a2a22]/92 to-[#0c3328]/70",
-      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/60 to-[#071a14]/70",
+      solid: "bg-[#071a14]/55",
+      horizontal: "bg-gradient-to-r from-[#071a14]/85 via-[#0a2a22]/65 to-[#0c3328]/45",
+      vertical: "bg-gradient-to-t from-[#071a14]/85 via-[#071a14]/30 to-[#071a14]/40",
     },
     heavy: {
-      solid: "bg-[#071a14]/92",
-      horizontal: "bg-gradient-to-r from-[#071a14] via-[#0a2a22]/98 to-[#0c3328]/85",
-      vertical: "bg-gradient-to-t from-[#071a14] via-[#071a14]/75 to-[#071a14]/85",
+      solid: "bg-[#071a14]/65",
+      horizontal: "bg-gradient-to-r from-[#071a14]/90 via-[#0a2a22]/75 to-[#0c3328]/55",
+      vertical: "bg-gradient-to-t from-[#071a14]/90 via-[#071a14]/40 to-[#071a14]/50",
     },
   },
 } as const;
@@ -53,7 +53,7 @@ export function PageHero({
   eyebrow,
   title,
   description,
-  image = "/img/hero-bg.jpg",
+  image = "/img/company-overview.png",
   ctaHref,
   ctaLabel,
   tone = "industrial",

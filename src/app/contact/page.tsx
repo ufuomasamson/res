@@ -20,7 +20,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Speak with Res Logistics"
         description="Terminal coordination, commercial inquiries, and emergency response — we’re ready."
-        image="/img/hero-bg.jpg"
+        image="/img/contact-p.jpg"
       />
 
       <section className="bg-navy-950 py-24">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <div
                   className="aspect-[4/3] bg-cover bg-center"
                   style={{
-                    backgroundImage: "url('/img/hero-bg.jpg')",
+                    backgroundImage: "url('/img/contact-p.jpg')",
                   }}
                   role="img"
                   aria-label="Office location map visualization"

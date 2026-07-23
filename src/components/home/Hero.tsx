@@ -72,9 +72,9 @@ export function Hero() {
           aria-hidden="true"
         />
 
-        <div className="absolute inset-0 bg-navy-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/88 to-navy-900/65" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/55" />
+        <div className="absolute inset-0 bg-navy-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-navy-950/55 to-navy-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-navy-950/30" />
         {!reduceMotion && <Particles />}
       </div>
 

@@ -55,9 +55,9 @@ export default function LogisticsShippingPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-navy-950/78" />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/98 via-navy-950/88 to-navy-900/65" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-navy-950/55" />
+          <div className="absolute inset-0 bg-navy-950/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/75 via-navy-950/55 to-navy-900/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-transparent to-navy-950/25" />
         </div>
 
         <div className="section-pad container-regis relative z-10 mx-auto max-w-3xl text-center">
