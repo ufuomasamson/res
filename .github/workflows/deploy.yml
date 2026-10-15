@@ -1,3 +1,4 @@
+```yaml
 name: Deploy RES Logistics
 
 on:
@@ -12,32 +13,26 @@ jobs:
     steps:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.0
+
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
+
           script: |
-            set -e
-            cd /www/wwwroot/res
+            set -euo pipefail
 
-            git fetch origin main
-            git reset --hard origin/main
+            echo "==> Starting RES Logistics deployment"
 
-            ls -la public/img/logistics-grid-*.png
-            test -f public/img/about-hero-alt.jpg
+            sudo -n /usr/local/sbin/res-deploy
 
-            rm -rf .next
-            npm ci
-            npm run build
+            echo "==> Checking RES Logistics response"
 
-            test -f public/img/logistics-grid-1.png
-            test -f public/img/logistics-grid-2.png
-            test -f public/img/logistics-grid-3.png
-            test -f public/img/logistics-grid-4.png
-            test -f public/img/logistics-grid-5.png
-            test -f public/img/logistics-grid-6.png
-            test -f public/img/about-hero-alt.jpg
+            if ! curl -fsS --max-time 20 http://127.0.0.1:6001/ -o /dev/null; then
+              echo "ERROR: RES did not respond successfully on port 6001"
+              exit 1
+            fi
 
-            pm2 restart res || pm2 start npm --name res -- start
-            pm2 save
+            echo "==> RES Logistics deployment and health check succeeded"
+```
