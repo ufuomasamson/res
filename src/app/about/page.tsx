@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "With years of experience, Res Logistics PTE Ltd is a trusted partner in bulk liquid storage, logistics, and sustainable energy supply chains.",
+    "We are a Singapore-based logistics and maritime services company dedicated to delivering reliable, efficient, and professional solutions across Asia and European port.",
 };
 
 const values = [
@@ -54,12 +54,12 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-              Trusted in Bulk Liquid Storage
+              Your Trusted Partner in Port Logistics, Shipping &amp; Liquid Storage.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-steel-light sm:text-base md:text-lg">
-              With years of experience, we have grown into one of
-              Europe’s most trusted names in bulk liquid storage, known for our
-              commitment to innovation, safety, and sustainability.
+              We are a Singapore-based logistics and maritime services company dedicated to
+              delivering reliable, efficient, and professional solutions across Asia and European
+              port
             </p>
           </Reveal>
         </div>

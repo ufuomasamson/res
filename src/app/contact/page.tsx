@@ -44,8 +44,15 @@ export default function ContactPage() {
               },
               {
                 icon: Phone,
-                title: "Emergency Desk",
-                copy: "+65 0000 0000 · 24/7 response line",
+                title: "Singapore",
+                copy: "+65 9379 6045",
+                href: "tel:+6593796045",
+              },
+              {
+                icon: Phone,
+                title: "Europe",
+                copy: "+31 635211257",
+                href: "tel:+31635211257",
               },
               {
                 icon: Clock,
@@ -63,7 +70,16 @@ export default function ContactPage() {
                       </span>
                       <div>
                         <p className="font-semibold text-white">{card.title}</p>
-                        <p className="mt-1 text-sm text-steel-light">{card.copy}</p>
+                        {"href" in card && card.href ? (
+                          <a
+                            href={card.href}
+                            className="mt-1 block text-sm text-steel-light transition-colors hover:text-cyan"
+                          >
+                            {card.copy}
+                          </a>
+                        ) : (
+                          <p className="mt-1 text-sm text-steel-light">{card.copy}</p>
+                        )}
                       </div>
                     </div>
                   </div>

@@ -99,12 +99,20 @@ export function Footer() {
             Insights on energy logistics, safety, and sustainability.
           </p>
           <NewsletterForm />
-          <p className="mt-6 text-sm text-steel">
-            Emergency:{" "}
-            <a href="tel:+6500000000" className="text-energy hover:underline">
-              +65 0000 0000
-            </a>
-          </p>
+          <div className="mt-6 space-y-2 text-sm text-steel">
+            <p>
+              Singapore{" "}
+              <a href="tel:+6593796045" className="text-energy hover:underline">
+                +65 9379 6045
+              </a>
+            </p>
+            <p>
+              Europe{" "}
+              <a href="tel:+31635211257" className="text-energy hover:underline">
+                +31 635211257
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
