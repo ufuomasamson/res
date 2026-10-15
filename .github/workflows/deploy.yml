@@ -1,4 +1,3 @@
-```yaml
 name: Deploy RES Logistics
 
 on:
@@ -35,4 +34,3 @@ jobs:
             fi
 
             echo "==> RES Logistics deployment and health check succeeded"
-```
