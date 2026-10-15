@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { PageTransition } from "@/components/layout/PageTransition";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
           <main id="main">{children}</main>
         </PageTransition>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
